@@ -20,7 +20,15 @@
     <title>Charge Together {% block title %}{% endblock %}</title>
 </head>
 <body>
+    <!-- Header-->
     {% include 'includes/header.html' %}
-    <h1>Hello World</h1>
+    
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer-->
+    {% include 'includes/footer.html' %}
 </body>
 </html>
