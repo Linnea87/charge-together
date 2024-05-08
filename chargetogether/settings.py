@@ -9,8 +9,9 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-import os
+
 from pathlib import Path
+import os
 if os.path.isfile('env.py'):
     import env
 
@@ -25,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = os.environ.get("DEVELOPMENT")
 
-ALLOWED_HOSTS = ['local', '.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -69,7 +70,9 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates')
+            os.path.join(BASE_DIR, 'templates',),
+            os.path.join(BASE_DIR, 'templates', 'allauth')
+    
         ],
         'APP_DIRS': True,
         'OPTIONS': {
