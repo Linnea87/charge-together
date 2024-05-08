@@ -66,11 +66,28 @@ a.nav-link {
     color: var(--white);
 }
 
+img.logo {
+    width: 18.75rem;
+}
+
 .active {
     border-bottom: 2px solid var(--purple);
     font-weight: 500;
 }
 
-img.logo {
-    width: 18.75rem;
+/* Form Styling */
+.container {
+    background-color: var(--light-purple);
+    width: 80%;
+    margin: 3% auto;
+    box-shadow: var(--small-box-shadow);
+    border-radius: 5px;
+}
+
+.form {
+    text-align: left;
+}
+
+.btn {
+    background-color: var(--purple);
 }
