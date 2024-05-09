@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEVELOPMENT")
+DEBUG = os.environ.get('DEVELOPMENT')
 
 ALLOWED_HOSTS = ['localhost', '.herokuapp.com', '127.0.0.1']
 
@@ -53,6 +53,10 @@ INSTALLED_APPS = [
     # Other
     'crispy_forms',
     'crispy_bootstrap5',
+    'cloudinary',
+    'cloudinary_storage',
+    'django_summernote',
+    'autoslug',
 ]
 
 SITE_ID = 1
@@ -117,7 +121,7 @@ WSGI_APPLICATION = 'chargetogether.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 # Password validation
@@ -165,6 +169,10 @@ LOGIN_REDIRECT_URL = "/"
 STATIC_URL = 'static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Cloudinary Settings
+DEAFULT_FILE_STORAGE = 'cloudinary_storage.MediaCloudinaryStorage'
+CLOUDINARY_URL = os.environ.get('CLOUDINRY_URL')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
