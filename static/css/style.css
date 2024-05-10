@@ -13,6 +13,9 @@
     --light-purple: #EFEBF5;
     --purple: #8F75B4;
     --black: #000000;
+    /* color code are generated from https://cssgradient.io */
+    --linear-background: linear-gradient(90deg, rgba(39,20,66,1) 0%, rgba(91,66,128,1) 50%, rgba(252,176,69,0.7777704831932774) 100%);
+    --orange:rgba(252,176,69,0.7777704831932774);
 
     /* Utils */
     --small-box-shadow: 1px 4px 7px 0 #00000061;
@@ -21,7 +24,6 @@
 
 html, body {
     height: 100%;
-    background-color: var(--off-white);
 }
 
 body {
@@ -39,8 +41,33 @@ main {
     background-color: var(--off-white);
 }
 
+
+/* Header */
+.navbar {
+    background: var(--linear-background);
+    box-shadow: var(--small-box-shadow);
+}
+
+
+img.logo {
+    width: 18rem;
+}
+
+a.nav-link {
+    color: var(--white); 
+}
+
+a.nav-link :hover {
+    color: var(--dark-purple);
+}
+.active {
+    border-bottom: 2px solid var(--orange);
+    font-weight: 500;
+}
+
 /* Footer */
 footer {
+    background: var(--linear-background);
     flex-shrink: 0;
     background-color: var(--dark-purple);
     display: flex;
@@ -54,25 +81,6 @@ footer {
 .social-icon {
     height: 2rem;
     margin: 1rem;
-}
-
-/* Header */
-.navbar {
-    background-color: var(--dark-purple);
-    box-shadow: var(--small-box-shadow);
-}
-
-a.nav-link {
-    color: var(--white);
-}
-
-img.logo {
-    width: 18.75rem;
-}
-
-.active {
-    border-bottom: 2px solid var(--purple);
-    font-weight: 500;
 }
 
 /* Form Styling */
