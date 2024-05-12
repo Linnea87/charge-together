@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Main Styling */
+/* Main color and image */
+
 :root {
     /* Fonts */
     --title: 'GB Garamond', serif;
@@ -9,18 +10,16 @@
     /* Color */
     --white: #FFFFFF;
     --off-white: #F7F8FA;
-    --dark-purple: #5B4280;
-    --light-purple: #EFEBF5;
-    --purple: #8F75B4;
     --black: #000000;
-    /* color code are generated from https://cssgradient.io */
-    --linear-background: linear-gradient(90deg, rgba(39,20,66,1) 0%, rgba(91,66,128,1) 50%, rgba(252,176,69,0.7777704831932774) 100%);
-    --orange:rgba(252,176,69,0.7777704831932774);
-
+    --sky-blue:#98cae0;
+    --bleu-de-france: #3083dd;
+    --bg-img: url('../images/cool-background.webp') no-repeat center/cover;
+    
     /* Utils */
     --small-box-shadow: 1px 4px 7px 0 #00000061;
     --border: 1px solid #00000030;
 }
+/* Main Style setting */
 
 html, body {
     height: 100%;
@@ -38,43 +37,66 @@ h1, h2, h3, h4, h5, h6 {
 
 main {
     flex: 1 0 auto;
-    background-color: var(--off-white);
+    background-color:var(--sky-blue);
 }
 
+/* Header and Navigation */
 
-/* Header */
-.navbar {
-    background: var(--linear-background);
-    box-shadow: var(--small-box-shadow);
+.site-header img {
+    display: none; /* hide the logo for bigger screens */
 }
 
+.nav {
+    visibility: hidden; /* hide navbar for bigger screens */
+}
 
-img.logo {
-    width: 18rem;
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px
+}
+
+/* Background image for navigation on smaller screens*/
+.nav-bg {
+    background:var(--bg-img);
+}
+.navbar-brand img {
+
+    width: 13rem; 
+    margin-top: -17px!important;
+    margin: 0 auto;
+}
+
+.navbar-toggler {
+    margin-right: 1rem; /* push the burger */
 }
 
 a.nav-link {
-    color: var(--white); 
+    margin-inline-start: 2rem;
+    font-size: small;
+    color: var(--black); 
 }
 
-a.nav-link :hover {
-    color: var(--dark-purple);
-}
 .active {
-    border-bottom: 2px solid var(--orange);
-    font-weight: 500;
+    border-bottom: 1px solid var(--dark-purple);
+}
+
+.hero {
+    
+    height: 20rem;
 }
 
 /* Footer */
+
 footer {
-    background: var(--linear-background);
     flex-shrink: 0;
-    background-color: var(--dark-purple);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-top: var(--border);
+    
 
 }
 
@@ -85,7 +107,7 @@ footer {
 
 /* Form Styling */
 .container {
-    background-color: var(--light-purple);
+    background: var(--bg-img);
     width: 80%;
     margin: 3% auto;
     box-shadow: var(--small-box-shadow);
@@ -95,7 +117,39 @@ footer {
 .form {
     text-align: left;
 }
-
 .btn {
-    background-color: var(--purple);
+    background: var(--bleu-de-france);
+}
+
+@media screen and (min-width: 1024px){
+    .navbar-brand {
+        display:none; 
+        float:none;
+    }
+    
+    .site-header {
+        background:var(--bg-img);
+        text-align: center;
+        padding-top: 0px; 
+        padding-bottom: 40px;
+      
+        
+    }
+    .site-header img {
+        padding-top: 1rem;
+        display: inline;
+        width: 30rem;
+    }
+    
+    .nav {
+        visibility: visible;
+        margin-inline-end: 2rem;
+        
+    }
+    .nav-bg {
+        background: var(--white);
+    }
+    .navbar {
+        border: var(--border);
+    }
 }

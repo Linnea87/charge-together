@@ -8,19 +8,18 @@ class PostForm(forms.ModelForm):
     """
     class Meta:
         model = Post
-        fields = ['title', 'image', 'image_alt', 'excerpt', 'content', 'status']
-
-        content = forms.CharField(widget=SummernoteWidget())
-
-        widget = {
-            "excerpt": forms.Textarea(attrs={"rows": 5}),
+        fields = ['title', 'image', 'image_alt', 'excerpt', 'content', 'status',]
+        
+        widgets = {
+            'excerpt': forms.Textarea(attrs={"rows": 5}),
+            'content':SummernoteWidget(),
         }
 
         labels = {
             'title': 'Title',
             'image': 'Image',
             'image_alt': 'Describe Image',
-            'excerpt': 'Description',
+            'excerpt': 'Excerpt',
             'content': 'Content',
             'status': 'Status',
         }
