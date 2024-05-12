@@ -1,6 +1,6 @@
 {% load static %}
     
-
+<!-- Logo for large screens -->
 <header class="site-header" role="banner">  
   <div class="container-fluid">
     <div class="row">
@@ -13,6 +13,7 @@
 {% with request.resolver_match.url_name as url_name %} 
   <nav class="navbar nav-bg navbar-expand-lg" data-bs-theme="light">
     <div class="container-fluid">
+      <!-- Logo for small screens-->
       <a class="navbar-brand" href="#"><img src="{% static 'images/logo.webp' %}"  alt="Charge Together Logo"></a>
       <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -43,7 +44,6 @@
             <a class="nav-link {% if url_name == 'accounts_login' %}active{% endif %}" href="/accounts/login/">Login</a>
           </li>
           {% endif %}
-          
           </li>
         </ul>
       </div>
