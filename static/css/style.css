@@ -83,10 +83,6 @@ a.nav-link {
     border-bottom: 1px solid var(--dark-purple);
 }
 
-.hero {
-    
-    height: 20rem;
-}
 
 /* Footer */
 
@@ -120,6 +116,20 @@ footer {
 .btn {
     background: var(--bleu-de-france);
 }
+
+/* Styling Blog Post */
+
+
+
+.post {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.post:hover {
+    cursor: pointer;
+}
+
 
 @media screen and (min-width: 1024px){
     .navbar-brand {
