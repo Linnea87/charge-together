@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Blog{% endblock title %}
+
+{% block content %}
+
+<h1 class="text-center p-2">
+    Latest Blog Post
+</h1>
+    <div class="card-container d-flex flex-row flex-wrap justify-content-center">
+        
+        {% for post in post_list %}
+        <a href="" class="post" aria-label="Click to view {{ post.title }}">
+            <div class="card m-3" style="width: 18rem;">
+                <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.image_alt }}">
+                <div class="card-body">
+                    <h2 class="card-title">{{ post.title }}</h2>
+                    <p class="card-text">{{ post.excerpt }}</p>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
+
+{% endblock content %}
+
