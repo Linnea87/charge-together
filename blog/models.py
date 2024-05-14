@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from cloudinary.models import CloudinaryField
+from django_resized import ResizedImageField
 from autoslug import AutoSlugField
 
 
@@ -13,7 +13,14 @@ class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = AutoSlugField(populate_from='title', unique=True, always_update=True)
     author = models.ForeignKey(User, related_name='post_owner', on_delete=models.CASCADE)
-    image = CloudinaryField('image', default='placeholder',)
+    image = ResizedImageField(
+        size=[400, None],
+        quality=75,
+        upload_to="blog/",
+        force_format="WEBP",
+        blank=False,
+        null=False,
+    )
     image_alt = models.CharField(max_length=100, null=False, blank=False)
     excerpt = models.TextField()
     content = models.TextField()
