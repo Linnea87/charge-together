@@ -10,8 +10,6 @@ class PostList(ListView):
     model = Post
     template_name ='blog/blog.html'
     queryset = Post.objects.filter(status=1).order_by("-created_on")
-    paginate_by = 6
-
 
 class CreatePost(LoginRequiredMixin, CreateView):
     """
