@@ -9,12 +9,15 @@
 </h1>
 <div class="card-container d-flex flex-row flex-wrap justify-content-center">
   {% for post in post_list %}
-  <a href="" class="post" aria-label="Click to view {{ post.title }}">
+  <a href="" class="post" aria-label="Click to view {{post.title}}">
     <div class="card m-3" style="width: 18rem;">
-      <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.image_alt }}">
+      <img src="{{post.image.url}}" class="card-img-top" alt="{{post.image_alt}}">
       <div class="card-body">
-        <h2 class="card-title">{{ post.title }}</h2>
-        <p class="card-text">{{ post.excerpt }}</p>
+        <h2 class="card-title">{{post.title}}</h2>
+        <hr>
+        <p class="card-text">{{post.excerpt|truncatechars:100}}</p>
+        <hr>
+        <p class="card-text text-muted h6">{{post.created_on}}</p>
       </div>
     </div>
   </a>

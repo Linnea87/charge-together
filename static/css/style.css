@@ -119,8 +119,13 @@ footer {
 
 /* Styling Blog Post */
 
+.card {
+    height: 92%;
+}
 
-
+.card-title {
+    font-size: 1.3rem;
+}
 .post {
     text-decoration: none;
     color: var(--black);
