@@ -102,17 +102,16 @@ footer {
 }
 
 /* Form Styling */
-.container {
+.form  {
     background: var(--bg-img);
     width: 80%;
     margin: 3% auto;
     box-shadow: var(--small-box-shadow);
     border-radius: 5px;
-}
-
-.form {
     text-align: left;
 }
+
+
 .btn {
     background: var(--bleu-de-france);
 }
@@ -123,9 +122,6 @@ footer {
     height: 92%;
 }
 
-.card-title {
-    font-size: 1.3rem;
-}
 .post {
     text-decoration: none;
     color: var(--black);
@@ -135,7 +131,54 @@ footer {
     cursor: pointer;
 }
 
+.post-info {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.post-container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.post-detail {
+    width: 100%;
+}
+
+.post-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-pic {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 62.5em) {
+    .post-info {
+        flex-direction: row;
+        border: 1px solid var(--black);
+       
+    }
+    .post-img {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .post-detail {
+        width: 60%;
+        padding: 2rem;
+    }
+
+    .post-container {
+        flex-direction: row;
+
+    }
+}
 @media screen and (min-width: 1024px){
     .navbar-brand {
         display:none; 

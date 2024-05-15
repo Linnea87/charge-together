@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %} Post Detail - {{post.title}}{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <div class="post-info mt-3 p-1">
+            <div class="post-img">
+                <img src="{{ post.image.url }}" alt="post.image_alt" class="post-pic">
+            </div>
+            <div class="post-detail">
+                <h1 class="text-center">{{ post.title }}</h1>
+                <p class="text-center">Posted by {{post.author}} on {{post.created_on}}</p>
+                <hr>
+                <p>{{post.excerpt}}</p>
+                <hr>
+                <br>
+                {% if request.user == post.author %}
+                <div class="text-center">
+                    <a href="" class="btn btn-primary w-25">Edit</a>
+                    <a href="" class="btn btn-primary w-25">Delete</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="post-container">
+            <div class="content p-3">
+                <p>{{post.content|safe }}</p>
+            </div>
+        
+        </div>
+
+    </div>
+
+{% endblock content %}
