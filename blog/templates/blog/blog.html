@@ -9,7 +9,7 @@
 </h1>
 <div class="card-container d-flex flex-row flex-wrap justify-content-center">
   {% for post in post_list %}
-  <a href="" class="post" aria-label="Click to view {{post.title}}">
+  <a href="{% url 'post_detail' post.id %}" class="post" aria-label="Click to view {{post.title}}">
     <div class="card m-3" style="width: 18rem;">
       <img src="{{post.image.url}}" class="card-img-top" alt="{{post.image_alt}}">
       <div class="card-body">

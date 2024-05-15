@@ -2,23 +2,19 @@ from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 from .models import Post
 
+
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
     list_display = (
-        'title', 
-        'slug', 
-        'status',
-        'created_on', 
-        'image',
+        "title",
+        "slug",
+        "status",
+        "created_on",
+        "image",
     )
-    search_fields = [
-        'title', 
-        'content'
-    ]
+    search_fields = ["title", "content"]
     list_filter = (
-        'status', 
-        'created_on',
+        "status",
+        "created_on",
     )
-    summernote_fields = (
-        'content',
-    )
+    summernote_fields = ("content",)
