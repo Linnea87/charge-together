@@ -17,15 +17,15 @@
                 <br>
                 {% if request.user == post.author %}
                 <div class="text-center">
-                    <a href="" class="btn btn-primary w-25">Edit</a>
-                    <a href="" class="btn btn-primary w-25">Delete</a>
+                    <a href="{% url 'edit_post' post.id %}" class="btn btn-primary w-25">Edit</a>
+                    <a href="{% url 'delete_post' post.id %}" class="btn btn-primary w-25">Delete</a>
                 </div>
                 {% endif %}
             </div>
         </div>
         <div class="post-container">
             <div class="content p-3">
-                <p>{{post.content|safe }}</p>
+                <p>{{post.content|safe}}</p>
             </div>
         
         </div>
