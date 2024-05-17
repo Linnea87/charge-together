@@ -42,7 +42,7 @@ class CreatePost(LoginRequiredMixin, CreateView):
     success_url = "/blog/"
 
     def form_valid(self, form):
-        form.instance.user = self.request.author
+        form.instance.author = self.request.user
         return super(CreatePost, self).form_valid(form)
     
 
