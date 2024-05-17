@@ -6,6 +6,7 @@ from django.dispatch import receiver
 from django_resized import ResizedImageField
 
 
+
 class Profile(models.Model):
     """
     Model for the Profile
