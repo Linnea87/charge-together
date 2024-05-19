@@ -13,7 +13,6 @@
     --black: #000000;
     --sky-blue:#98cae0;
     --bleu-de-france: #3083dd;
-    --bg-img: url('../images/cool-background.webp') no-repeat center/cover;
     
     /* Utils */
     --small-box-shadow: 1px 4px 7px 0 #00000061;
@@ -37,69 +36,43 @@ h1, h2, h3, h4, h5, h6 {
 
 main {
     flex: 1 0 auto;
-    background-color:var(--sky-blue);
+    background-color:var(--white);
 }
-
-/* Header and Navigation */
-
-.site-header img {
-    display: none; /* hide the logo for bigger screens */
-}
-
-.nav {
-    visibility: hidden; /* hide navbar for bigger screens */
-}
-
-.navbar-brand {
-    float: left;
-    height: 50px;
-    padding: 15px 15px;
-    font-size: 18px;
-    line-height: 20px
-}
-
-/* Background image for navigation on smaller screens*/
-.nav-bg {
-    background:var(--bg-img);
-}
-.navbar-brand img {
-
-    width: 13rem; 
-    margin-top: -17px!important;
-    margin: 0 auto;
-}
-
-.navbar-toggler {
-    margin-right: 1rem; /* push the burger */
-}
-
-a.nav-link {
-    margin-inline-start: 2rem;
-    font-size: small;
-    color: var(--black); 
-}
-
-.active {
-    border-bottom: 1px solid var(--dark-purple);
-}
-
 
 /* Footer */
 
 footer {
     flex-shrink: 0;
+    background: var(--off-white);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
-
 }
 
 .social-icon {
     height: 2rem;
     margin: 1rem;
 }
+/* Header and Navigation */
+
+.navbar {
+    background:var(--off-white);
+}
+
+
+img.logo {
+    width:18.75rem; 
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+
+.active {
+    border-bottom: 1px solid var(--dark-purple);
+    font-weight: 500;
+}
+
 
 /* Form Styling */
 .form  {
@@ -179,35 +152,5 @@ footer {
 
     }
 }
-@media screen and (min-width: 1024px){
-    .navbar-brand {
-        display:none; 
-        float:none;
-    }
+
     
-    .site-header {
-        background:var(--bg-img);
-        text-align: center;
-        padding-top: 0px; 
-        padding-bottom: 40px;
-      
-        
-    }
-    .site-header img {
-        padding-top: 1rem;
-        display: inline;
-        width: 30rem;
-    }
-    
-    .nav {
-        visibility: visible;
-        margin-inline-end: 2rem;
-        
-    }
-    .nav-bg {
-        background: var(--white);
-    }
-    .navbar {
-        border: var(--border);
-    }
-}

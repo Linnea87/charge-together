@@ -11,7 +11,7 @@
                 {% if profile.image.url is not none %}
                 <img src="{{ profile.image.url }}" alt="{{ profile.user.username }}'s profile image">
                 {% else %}
-                <img src="https://res.cloudinary.com/delcgfh9h/image/upload/v1715952370/no-image-photography-icon_wyzsk0.svg"
+                <img src="{% static 'icons/no-image-photography-icon.webp' %}"
                     alt="Image not found icon">
                 {% endif %}
             </div>
@@ -75,7 +75,7 @@
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
-    modal.style.display = "none";
+        modal.style.display = "none";
     }
 
     // When the user clicks anywhere outside of the modal, close it

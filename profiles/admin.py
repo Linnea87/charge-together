@@ -9,4 +9,6 @@ class ProfileAdmin(admin.ModelAdmin):
         "bio",
         "image"
     )
+
+    
 admin.site.register(Profile, ProfileAdmin)
