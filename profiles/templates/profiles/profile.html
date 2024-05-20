@@ -6,13 +6,12 @@
 {% block content %}
 <div class="container p-4">
     <div class="profile">
-        <div class="info">
+        <div class="profile-info">
             <div class="profile-img text-center">
                 {% if profile.image.url is not none %}
                 <img src="{{ profile.image.url }}" alt="{{ profile.user.username }}'s profile image">
                 {% else %}
-                <img src="{% static '/icons/no-image-photography-icon.webp' %}"
-                    alt="Image not found icon">
+                <img src="{% static '/icons/no-image-photography-icon.webp' %}" alt="Image not found icon">
                 {% endif %}
             </div>
             <h1>{{ profile.user.username }}</h1>
@@ -31,7 +30,9 @@
         <div class="profile-post">
             <h2 class="text-center pb-4">Latest Post</h2>
             {% for post in profile.user.post_owner.all %}
-            <a href="{% url 'post_detail' post.id}"><h3>{{ post.title }}</h3></a>
+            <a href="{% url 'post_detail' post.id %}">
+                <h3>{{ post.title }}</h3>
+            </a>
             {{ post.created_on }}
             <hr>
             {% endfor %}
@@ -41,16 +42,16 @@
     <div id="myModal" class="modal mt-5">
         <!-- Modal content -->
         <div class="modal-content container">
-        <span class="close fs-1 p-2">&times;</span>
-        <form method="POST" action="{% url 'edit_profile' request.user.id %}" class="mb-2 p-2" enctype="multipart/form-data">
-            <h2 class="text-center fs-4">Edit Profile</h2>
-            {% csrf_token %}
-            {{ form|crispy }}
-            {{ form.media }}
-            <div class="d-flex-justify-content-center">
-                <button type="submit" class="btn btn-primary w-25">Edit Profile</button>
-            </div>
-        </form>
+            <span class="close fs-1 p-2">&times;</span>
+            <form method="POST" action="{% url 'edit_profile' request.user.id %}" class="mb-2 p-2" enctype="multipart/form-data">
+                <h2 class="text-center fs-4">Edit Profile</h2>
+                {% csrf_token %}
+                {{ form|crispy }}
+                {{ form.media }}
+                <div class="d-flex-justify-content-center">
+                    <button type="submit" class="btn btn-primary w-25">Edit Profile</button>
+                </div>
+            </form>
         </div>
     </div>
 </div> 

@@ -12,9 +12,7 @@
                 <h1 class="text-center">{{ post.title }}</h1>
                 <p class="text-center">Posted by {{post.author}} on {{post.created_on}}</p>
                 <hr>
-                <p>{{post.excerpt}}</p>
-                <hr>
-                <br>
+                <p class="p-3">{{post.excerpt}}</p>
                 {% if request.user == post.author %}
                 <div class="text-center">
                     <a href="{% url 'edit_post' post.id %}" class="btn btn-primary w-25">Edit</a>
