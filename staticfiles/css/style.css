@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
 
 /* Main color and image */
 
 :root {
     /* Fonts */
     --title: 'GB Garamond', serif;
-    --main-font:'Montserrat', serif;
+    --main-font:'Roboto', serif;
     
     /* Color */
     --white: #FFFFFF;
@@ -63,20 +63,17 @@ footer {
 
 img.logo {
     width:18.75rem; 
-    padding-top: 1rem;
-    padding-left: 1rem;
 }
 
 
 .active {
-    border-bottom: 1px solid var(--dark-purple);
+    border-bottom: 1px solid var(--black);
     font-weight: 500;
 }
 
 
 /* Form Styling */
 .form  {
-    background: var(--bg-img);
     width: 80%;
     margin: 3% auto;
     box-shadow: var(--small-box-shadow);
@@ -84,15 +81,10 @@ img.logo {
     text-align: left;
 }
 
-
-.btn {
-    background: var(--bleu-de-france);
-}
-
 /* Styling Blog Post */
 
 .card {
-    height: 92%;
+    height: 80%;
 }
 
 .post {
@@ -126,17 +118,49 @@ img.logo {
     align-items: center;
 }
 
-.post-pic {
+
+
+/* Profiles */
+.profile-img {
+    width: 280px;
+    margin: 0 auto
+}
+
+.profile-img img {
+    border-radius: 8px;
     width: 100%;
-    height: auto;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-info {
+    width: 100%;
+    text-align: center;
+}
+
+.profile-post {
+    width: 70%;
+}
+
+a.profile-post h3 {
+    text-decoration: none;
 }
 
 @media screen and (min-width: 62.5em) {
+    .main-title {
+        width: 50%;
+    }
+    
     .post-info {
         flex-direction: row;
         border: 1px solid var(--black);
        
     }
+
     .post-img {
         width: 40%;
         margin: 0 auto;
@@ -151,6 +175,21 @@ img.logo {
         flex-direction: row;
 
     }
+
+    .profile {
+        flex-direction: row;
+    }
+
+    .profile-info {
+        width: 30%;
+    }
+
+    .profile-post {
+        width: 80%;
+        padding: 1.5rem 3rem;
+    }
+
+    
 }
 
     
