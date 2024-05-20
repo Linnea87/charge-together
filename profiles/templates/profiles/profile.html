@@ -11,7 +11,7 @@
                 {% if profile.image.url is not none %}
                 <img src="{{ profile.image.url }}" alt="{{ profile.user.username }}'s profile image">
                 {% else %}
-                <img src="{% static 'icons/no-image-photography-icon.webp' %}"
+                <img src="{% static '/icons/no-image-photography-icon.webp' %}"
                     alt="Image not found icon">
                 {% endif %}
             </div>
@@ -48,7 +48,7 @@
             {{ form|crispy }}
             {{ form.media }}
             <div class="d-flex-justify-content-center">
-                <button type="submit" class="btn btn-primary w-25">Edit</button>
+                <button type="submit" class="btn btn-primary w-25">Edit Profile</button>
             </div>
         </form>
         </div>

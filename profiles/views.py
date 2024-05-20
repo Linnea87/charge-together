@@ -23,6 +23,8 @@ class Profiles(TemplateView):
 
 
 class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    """Edit a profile"""
+
     form_class = ProfileForm
     model = Profile
 
