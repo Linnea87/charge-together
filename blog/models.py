@@ -42,6 +42,3 @@ class Post(models.Model):
     def number_of_likes(self):
         return self.likes.count()
 
-class PostLike(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)

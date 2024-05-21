@@ -24,10 +24,29 @@
         <div class="post-container">
             <div class="content p-3">
                 <p>{{post.content|safe}}</p>
+                <hr>
+                <div>
+                    {% if user.is_authenticated %}
+                    <form action="{% url 'post_like' post.id %}" method="POST">
+                        {% csrf_token %}
+                        {% if post_is_liked %}
+                        <button type="submit" name="post_id" value="{{post.id}}" class="btn-like">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        {% else %}
+                        <button type="submit" name="post_id" value="{{post.id}}" class="btn btn-like">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        {% endif %}
+                        <span class="text-secondary">{{ post.number_of_likes }}</span>
+                    </form>
+                    {% else %}
+                    <span class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }}</span>
+                    {% endif %}
+                </div>
             </div>
-        
         </div>
-
     </div>
 
 {% endblock content %}
+

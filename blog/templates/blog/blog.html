@@ -17,7 +17,8 @@
         <hr>
         <p class="card-text">{{post.excerpt|truncatechars:100}}</p>
         <hr>
-        <p class="card-text text-muted h6">{{post.created_on}}</p>
+        <p class="card-text text-muted h6">{{post.created_on}} <i class="far fa-heart"></i>
+          {{ post.number_of_likes }}</p>
       </div>
     </div>
   </a>
