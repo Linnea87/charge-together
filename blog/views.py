@@ -41,7 +41,7 @@ class PostDetail(DetailView):
     """
     template_name = "blog/post_detail.html"
     model = Post
-    queryset = Post.objects.filter(status=1).order_by("-created_on")
+    queryset = Post.objects.order_by("-created_on")
     
     def get_context_data(self, **kwargs):
         data = super().get_context_data(**kwargs)
