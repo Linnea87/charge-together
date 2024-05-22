@@ -23,7 +23,8 @@ class Profile(models.Model):
         blank=False,
     )
     bio = RichTextField(max_length=2500, null=True, blank=True)
-
+    liked_post = models.ManyToManyField(User, related_name="liked_post", blank=True)
+    
     def __str__(self):
         return str(self.user.username)
 
