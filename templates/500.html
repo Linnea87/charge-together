@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 
-{% block title %}403-Error{% endblock title %}
+{% block title %}500-Error{% endblock title %}
 
 {% block content %}
 <div class="container text-center">
-    <h1>403- Unauthorized Access</h1>
-    <p>Your not authorized to perfom this action</p>
+    <h1>500- Internal Server Error</h1>
+    <p>Don't worry, this is us not you!</p>
     <a href="{% url 'home' %}" class="btn btn-primary w-25">Home</a>
 </div>
 
-{% endblock content %}
+{% endblock %}
+
