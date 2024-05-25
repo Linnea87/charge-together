@@ -10,15 +10,21 @@
             </div>
             <div class="post-detail">
                 <h1 class="text-center">{{ post.title }}</h1>
-                <p class="text-center">Posted by {{post.author}} on {{post.created_on}}</p>
+                <p class="text-center"><small>Written by {{post.author}} on {{post.created_on}}</small><br>
+                    {% if request.user == post.author %}
+                        <a href="{% url 'edit_post' post.id %}"><small>Edit</small></a>
+                        <a href="{% url 'delete_post' post.id %}"><small>Delete</a></small>
+                    {% else %}
+                        <button  class="btn btn-primary w-25 mb-4">
+                            <a href="{% url 'profile' post.id %}">Wisit Profile</a>
+                        </button>
+                        
+                    {% endif %}
+                </p>
                 <hr>
+               
                 <p class="p-3">{{post.excerpt}}</p>
-                {% if request.user == post.author %}
-                <div class="text-center">
-                    <a href="{% url 'edit_post' post.id %}" class="btn btn-primary w-25">Edit</a>
-                    <a href="{% url 'delete_post' post.id %}" class="btn btn-primary w-25">Delete</a>
-                </div>
-                {% endif %}
+                
             </div>
         </div>
         <div class="post-container">
@@ -47,6 +53,6 @@
             </div>
         </div>
     </div>
-
+   
 {% endblock content %}
 
