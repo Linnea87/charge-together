@@ -4,7 +4,42 @@
 {% block title %}Profile - {{profile.user.username}}{% endblock title %}
 
 {% block content %}
-<div class="container p-4">
+<div class="container">
+    <div class="profile-info">
+        <div class="profile-card mb-4">
+            <div class="row ">
+                <div class="profile-img col-md-4">
+                    {% if profile.image.url is not none %}
+                        <img src="{{ profile.image.url }}" alt="{{ profile.user.username }}'s profile image">
+                        {% else %}
+                        <img src="{% static '/icons/no-image-photography-icon.webp' %}" alt="Image not found icon">
+                    {% endif %}
+                </div>
+                <div class="col-md-8">
+                    <div class="profile-card-body">
+                        <h1 class="text-center">About Me:</h1>
+                        <small><p><strong>Name: </strong>{{profile.user.username}}</p></small>
+                        <small><p><strong>Joined: </strong>{{profile.user.date_joined|date:'d M Y'}}</p></small>
+                        <small><p><strong>Post: </strong>{{profile.user.post_owner.count}}</p></small>
+                        <hr>
+                        <div class="text-center">
+                            {% if profile.bio is not none %}
+                            {{ profile.bio|safe }}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% if request.user == profile.user %}
+            <button id="myBtn" class="btn btn-secondary w-25 btn-edit">Edit</button>
+        {% endif %}
+    </div>
+</div>
+
+
+
+<!-- <div class="container p-4">
     <div class="profile">
         <div class="profile-info">
             <div class="profile-img text-center">
@@ -21,23 +56,29 @@
             {{ profile.bio|safe }}
             {% endif %}
 
-            {% if request.user == profile.user %}
-            <div>
-                <button id="myBtn" class="btn btn-primary w-25 mb-4">Edit</button>
-            </div>
-            {% endif %}
-        </div>
-        <div class="profile-post">
-            <h2 class="text-center pb-4">Latest Post</h2>
-            {% for post in profile.user.post_owner.all %}
-            <a href="{% url 'post_detail' post.id %}">
-                <h3>{{ post.title }}</h3>
-            </a>
-            {{ post.created_on }}
-            <hr>
-            {% endfor %}
+           
         </div>
     </div>
+</div>  -->
+<div class="latest-bg">
+    <h2 class="text-center pb-4">Latest Post</h2>
+    <div class="latest-card-container d-flex flex-row flex-wrap justify-content-center">
+        {% for post in profile.user.post_owner.all %}
+        <a href="{% url 'post_detail' post.id %}" class="post" aria-label="Click to view {{post.title}}">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h2 class="card-title">
+                    {{post.title}}
+                    </h2>
+                    <p class="card-text text-muted h6">{{post.created_on}} <i class="far fa-heart"></i>
+                        {{ post.number_of_likes }}
+                    </p>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
     <!-- The Modal -->
     <div id="myModal" class="modal mt-5">
         <!-- Modal content -->
@@ -54,7 +95,6 @@
             </form>
         </div>
     </div>
-</div> 
 {% endblock content %}
 
 {% block extra_js %}

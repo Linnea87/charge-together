@@ -45,11 +45,15 @@ main {
     font-size: 16px;
 }
 
+hr {
+    width: 95%;
+}
+
 /* Footer */
 
 footer {
     flex-shrink: 0;
-    background: var(--off-white);
+    background: #7D6978;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -63,8 +67,17 @@ footer {
 /* Header and Navigation */
 
 .navbar {
-    background:var(--off-white);
+    background:#7D6978;
+   
 }
+
+
+
+a.nav-link {
+    color: var(--white);
+    background-color: #7D6978;
+}
+
 
 
 img.logo {
@@ -92,13 +105,27 @@ img.logo {
 
 
 .btn {
-    background: var(--bleu-de-france);
+    background: #7d6978;
 }
 
 /* Styling Blog Post */
 
 .card {
-    height: 92%;
+    width: 20rem;
+    padding: 1rem 1rem 1rem;
+    height: 90%;
+}
+
+.card img {
+    border-radius: 8px;
+    height: 16rem; 
+    width: 18rem; 
+ 
+}
+
+.card h2 {
+    font-size: 20px;
+    
 }
 
 .post {
@@ -140,17 +167,36 @@ img.logo {
     height: auto;
 }
 
-.profile-img {
-    width: 280px;
-    margin: 0 auto;
-}
+
 
 .profile-img img {
     border-radius: 8px;
     width: 100%;
 }
 
-.profile {
+.latest-card-container {
+    width: 20rem;
+    margin-left: 2rem;
+    padding-bottom: 3rem;
+}
+
+.profile-card {
+    border: solid #7d69786b;
+    border-radius: 9px;
+    margin-top:  2rem;
+   
+}
+
+.latest-bg {
+    background-color:#7d69786b;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+   
+}
+
+
+
+/* .profile {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -164,10 +210,15 @@ img.logo {
 .profile-post, 
 .liked-posts {
     width: 100%;
-}
+} */
 
 
 @media screen and (min-width: 62.5em) {
+    .card h2 {
+        font-size: 25px;
+        
+    }
+
     .post-info {
         flex-direction: row;
         border: 1px solid var(--black);
@@ -192,9 +243,6 @@ img.logo {
         flex-direction: row;
     }
 
-    .info {
-        width: 30%;
-    }
 
     .profile-post, 
     .liked-posts {
