@@ -77,6 +77,17 @@ The target audience includes parents, siblings, grandparents, aunts, uncles, cou
 - Increase user retention through interactive features and personalized experiences.
 
 ### User Goals
+
+- Easily find and read about other people's stories and experiences 
+
+- Share their own stories and experiences with others in the same situation
+
+- Interact with other users by liking and commenting on blog posts.
+
+- Easily navigate between the different pages of the blog and get access to relevant information.
+
+- Have a visually appealing and responsive user interface.
+
 ## Agile Planning
 ### User Stories
 ## Scope
