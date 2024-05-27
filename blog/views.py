@@ -13,8 +13,8 @@ from django.contrib.auth.mixins import (
 )
 
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Post
-from .forms import PostForm
+from .models import Post, Comment
+from .forms import PostForm, CommentForm
 
 
 class PostList(ListView):
@@ -66,7 +66,7 @@ class CreatePost(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super(CreatePost, self).form_valid(form)
-    
+
 
 class EditPost(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """
@@ -89,3 +89,18 @@ class DeletePost(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     
     def test_func(self):
         return self.request.user == self.get_object().author
+    
+
+class AddComment(LoginRequiredMixin, CreateView):
+    """
+    Add Post view
+    """
+    model = Comment
+    template_name = "blog/add_comment.html"
+    form_class = CommentForm
+    success_url = "/blog/" 
+
+    def form_valid(self, form):
+        form.instance.post_id = self.kwargs['pk']
+        return super().form_valid(form)
+
