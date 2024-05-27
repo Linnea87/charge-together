@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Main color and image */
 
 :root {
     /* Fonts */
     --title: 'GB Garamond', serif;
-    --main-font:'Roboto', serif;
+    --main-font:'Montserrat', serif;
     
     /* Color */
     --white: #FFFFFF;
@@ -39,11 +39,21 @@ main {
     background-color:var(--white);
 }
 
+.btn-like {
+    border: none;
+    background-color: white;
+    font-size: 16px;
+}
+
+hr {
+    width: 95%;
+}
+
 /* Footer */
 
 footer {
     flex-shrink: 0;
-    background: var(--off-white);
+    background: #7D6978;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -57,23 +67,35 @@ footer {
 /* Header and Navigation */
 
 .navbar {
-    background:var(--off-white);
+    background:#7D6978;
+   
 }
+
+
+
+a.nav-link {
+    color: var(--white);
+    background-color: #7D6978;
+}
+
 
 
 img.logo {
     width:18.75rem; 
+    padding-top: 1rem;
+    padding-left: 1rem;
 }
 
 
 .active {
-    border-bottom: 1px solid var(--black);
+    border-bottom: 1px solid var(--dark-purple);
     font-weight: 500;
 }
 
 
 /* Form Styling */
 .form  {
+    background: var(--bg-img);
     width: 80%;
     margin: 3% auto;
     box-shadow: var(--small-box-shadow);
@@ -81,10 +103,29 @@ img.logo {
     text-align: left;
 }
 
+
+.btn {
+    background: #7d6978;
+}
+
 /* Styling Blog Post */
 
 .card {
-    height: 80%;
+    width: 20rem;
+    padding: 1rem 1rem 1rem;
+    height: 90%;
+}
+
+.card img {
+    border-radius: 8px;
+    height: 16rem; 
+    width: 18rem; 
+ 
+}
+
+.card h2 {
+    font-size: 20px;
+    
 }
 
 .post {
@@ -112,55 +153,77 @@ img.logo {
     width: 100%;
 }
 
+.post-detail a {
+   text-decoration: none;
+}
 .post-img {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-
-/* Profiles */
-.profile-img {
-    width: 280px;
-    margin: 0 auto
+.post-pic {
+    width: 100%;
+    height: auto;
 }
+
+
 
 .profile-img img {
     border-radius: 8px;
     width: 100%;
 }
 
-.profile {
+.latest-card-container {
+    width: 20rem;
+    margin-left: 2rem;
+    padding-bottom: 3rem;
+}
+
+.profile-card {
+    border: solid #7d69786b;
+    border-radius: 9px;
+    margin-top:  2rem;
+   
+}
+
+.latest-bg {
+    background-color:#7d69786b;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+   
+}
+
+
+
+/* .profile {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.profile-info {
+.info {
     width: 100%;
     text-align: center;
 }
 
-.profile-post {
-    width: 70%;
-}
+.profile-post, 
+.liked-posts {
+    width: 100%;
+} */
 
-a.profile-post h3 {
-    text-decoration: none;
-}
 
 @media screen and (min-width: 62.5em) {
-    .main-title {
-        width: 50%;
+    .card h2 {
+        font-size: 25px;
+        
     }
-    
+
     .post-info {
         flex-direction: row;
         border: 1px solid var(--black);
        
     }
-
     .post-img {
         width: 40%;
         margin: 0 auto;
@@ -180,16 +243,16 @@ a.profile-post h3 {
         flex-direction: row;
     }
 
-    .profile-info {
-        width: 30%;
-    }
 
-    .profile-post {
-        width: 80%;
+    .profile-post, 
+    .liked-posts {
+        width: 70%;
         padding: 1.5rem 3rem;
     }
 
-    
+    .profile-post a {
+        text-decoration: none;
+    }
 }
 
     
