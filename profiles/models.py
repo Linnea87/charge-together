@@ -1,4 +1,5 @@
 from django.db import models
+from blog.models import Post
 from djrichtextfield.models import RichTextField
 
 from django.contrib.auth.models import User
@@ -23,10 +24,15 @@ class Profile(models.Model):
         blank=False,
     )
     bio = RichTextField(max_length=2500, null=True, blank=True)
-    liked_post = models.ManyToManyField(User, related_name="liked_post", blank=True)
+    liked_post = models.ManyToManyField(Post, related_name="liked_post", blank=True)
     
     def __str__(self):
         return str(self.user.username)
+
+class PostLike(models.Model):
+    """ Model representing a like for a specific post by a user. Code used from the Code Institute's I think, Therefore I blog. """
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 @receiver(post_save, sender=User)
