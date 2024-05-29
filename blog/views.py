@@ -1,7 +1,7 @@
 from django.views.generic import (
     CreateView, ListView, 
     DetailView, DeleteView,
-    UpdateView, 
+    UpdateView
 
 )
 from django.shortcuts import get_object_or_404
@@ -25,12 +25,16 @@ class PostList(ListView):
     template_name = "blog/blog.html"
     queryset = Post.objects.filter(status=1).order_by("-created_on")
 
-def PostLike(request, pk):
+class PostLike(DetailView):
+
+    def post(self, request, pk):
         post = get_object_or_404(Post, id=request.POST.get('post_id'))
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
+            request.user.profile.liked_posts.remove(post)
         else:
             post.likes.add(request.user)
+            request.user.profile.liked_posts.add(post)
 
         return HttpResponseRedirect(reverse('post_detail', args=[str(pk)]))
 
@@ -96,11 +100,10 @@ class AddComment(LoginRequiredMixin, CreateView):
     Add Post view
     """
     model = Comment
-    template_name = "blog/add_comment.html"
+    template_name = "blog/comment.html"
     form_class = CommentForm
     success_url = "/blog/" 
-
+    
     def form_valid(self, form):
-        form.instance.post_id = self.kwargs['pk']
+        form.instance.name = self.request.user
         return super().form_valid(form)
-
