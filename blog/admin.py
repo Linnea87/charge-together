@@ -19,8 +19,13 @@ class PostAdmin(SummernoteModelAdmin):
     )
     summernote_fields = ("content")
 
+    fieldsets = (
+        (None, {
+            'fields': ('title', 'author', 'image', 'excerpt', 'content', 'status', 'likes'),
+        }),
+    )
 
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'body', 'created_on')
+    list_display = ('name', 'body', 'post', 'created_on')
