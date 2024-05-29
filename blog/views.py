@@ -31,10 +31,8 @@ class PostLike(DetailView):
         post = get_object_or_404(Post, id=request.POST.get('post_id'))
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
-            request.user.profile.liked_posts.remove(post)
         else:
             post.likes.add(request.user)
-            request.user.profile.liked_posts.add(post)
 
         return HttpResponseRedirect(reverse('post_detail', args=[str(pk)]))
 

@@ -38,7 +38,3 @@ def create_user_profile(instance, created, **kwargs):
     if created:
         Profile.objects.create(user=instance)
 
-class PostLike(models.Model):
-    """ Model representing a like for a specific post by a user. Code used from the Code Institute's I think, Therefore I blog. """
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)

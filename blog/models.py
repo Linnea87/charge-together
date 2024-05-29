@@ -42,6 +42,12 @@ class Post(models.Model):
     def number_of_likes(self):
         return self.likes.count()
 
+class PostLike(models.Model):
+    """ Model representing a like for a specific post by a user. Code used from the Code Institute's I think, Therefore I blog. """
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+
 class Comment(models.Model):
     post = models.ForeignKey(Post, related_name="comments", on_delete=models.CASCADE)
     user = models.ForeignKey(User, related_name="commenter", on_delete=models.CASCADE)
