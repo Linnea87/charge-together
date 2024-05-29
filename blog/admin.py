@@ -26,6 +26,6 @@ class PostAdmin(SummernoteModelAdmin):
     )
 
 
-# @admin.register(Comment)
-# class CommentAdmin(admin.ModelAdmin):
-#     list_display = ( 'body', 'post', 'created_on')
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ( 'body', 'post', 'created_on')

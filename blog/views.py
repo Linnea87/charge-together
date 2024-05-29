@@ -95,14 +95,14 @@ class DeletePost(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return self.request.user == self.get_object().author
     
 
-# class AddComment(LoginRequiredMixin, CreateView):
-#     """
-#     Add Post view
-#     """
-#     model = Comment
-#     template_name = "blog/comment.html"
-#     form_class = CommentForm
-#     success_url = "/blog/" 
+class AddComment(LoginRequiredMixin, CreateView):
+    """
+    Add Post view
+    """
+    model = Comment
+    template_name = "blog/comment.html"
+    form_class = CommentForm
+    success_url = "/blog/" 
     
 #     def form_valid(self, form):
 #         form.instance.user = self.kwargs['pk']
