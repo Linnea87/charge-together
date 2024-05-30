@@ -2,7 +2,7 @@ from django.urls import path
 from .views import (
     CreatePost, PostList, 
     PostDetail, DeletePost,
-    EditPost, PostLike, AddComment
+    EditPost, PostLike, NewComment
 )
 
 urlpatterns = [
@@ -12,6 +12,6 @@ urlpatterns = [
     path("delete/<slug:pk>/", DeletePost.as_view(), name="delete_post"),
     path("edit/<slug:pk>/", EditPost.as_view(), name="edit_post"),
     path("like/<int:pk>", PostLike.as_view(), name="post_like"),
-    path("<int:pk>/comment/", AddComment.as_view(), name="add_comment"),
+    path("<int:pk>/comment/", NewComment.as_view(), name="new_comment"),
   
 ]

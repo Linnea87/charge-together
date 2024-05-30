@@ -4,13 +4,15 @@ from django.views.generic import (
     UpdateView
 
 )
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 from django.contrib.auth.mixins import (
     UserPassesTestMixin, LoginRequiredMixin
 )
+
+from django.contrib import messages
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Post, Comment
@@ -55,6 +57,8 @@ class PostDetail(DetailView):
         data['number_of_likes'] = likes_connected.number_of_likes()
         data['post_is_liked'] = liked
         return data
+     
+    
 
 class CreatePost(LoginRequiredMixin, CreateView):
     """
@@ -93,7 +97,7 @@ class DeletePost(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return self.request.user == self.get_object().author
     
 
-class AddComment(LoginRequiredMixin, CreateView):
+class NewComment(LoginRequiredMixin, CreateView):
     """
     Add Post view
     """
@@ -102,6 +106,8 @@ class AddComment(LoginRequiredMixin, CreateView):
     form_class = CommentForm
     success_url = "/blog/" 
     
-#     def form_valid(self, form):
-#         form.instance.user = self.kwargs['pk']
-#         return super().form_valid(form)
+    def form_valid(self, form):
+        form.instance.post_id = self.kwargs['pk']
+        form.instance.user= self.request.user
+        messages.success(self.request, 'Your success message here.')
+        return super().form_valid(form)
