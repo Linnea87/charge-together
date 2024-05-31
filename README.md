@@ -11,28 +11,26 @@ Here users can write and share their stories and experiences. And as new parents
 
 - [Introduction](#introduction)
 - [Project Goals](#project-goals)
-    - [Strategy](#project-goals)
     - [Target Audience](#target-audience)
-    - [Site Goals](#site-goals)
+    - [Strategy](#project-goals)
+    - [Site Owner Goals](#site-owner-goals)
     - [User Goals](#user-goals)
 - [Agile Planning](#agile-planning)
-     - [User Stories](#user-stories)
-- [Scope](#scope)
-- [Structure](#structure)
-    - [Features](#features)
-    - [Future Features](#future-features)
-- [Skeleton](#skeleton)
+    -[Epic](#epic)
+    -[Implemented User Stories](#implemented-user-stories)
+    -[Not implemented User Stories](#not-implemented-user-stories)
     - [Flowchart](#flowchart)
-    - [Wireframes](#wireframes)
     - [Entity Relational Diagram](#entity-relational-diagram)
+- [Design](#design)
+    - [Wireframes](#wireframes)
+    - [Colour Scheme](#colour-scheme)
+    - [Typography](#typography)
+- [Features](#features)
+- [Future Features](#future-features)
 - [Security](#security)
     - [Cross-Site Request Forgery (CSRF) Protection](#cross-site-request-forgery-csrf-protection)
     - [Django Allauth for Authentication and Authorization](#django-allauth-for-authentication-and-authorization)
     - [Restricted Features for Authenticated Users](#restricted-features-for-authenticated-users)
-- [Surface](#surface)
-    - [Design](#design)
-        - [Colour Scheme](#colour-scheme)
-        - [Typography](#typography)
 - [Technologies](#technologies)
 - [Deployment](#deployment)
 - [Testing](#testing)
@@ -89,24 +87,65 @@ The target audience includes parents, siblings, grandparents, aunts, uncles, cou
 - Have a visually appealing and responsive user interface.
 
 ## Agile Planning
-### User Stories
-## Scope
-## Structure
-### Features
-### Future Features
-## Skeleton
+To implement agile planning, I wrote four different epics and divided each epic into user stories. Each user story has acceptance criteria and tasks.  I also created three different labels, *Must have*, *Should have* and *Could have*. In this way I categorized my user stories so I had a clear picture which user stories I needed to prioritize first. This was the basis for the development of the projects features
+
+### EPIC
+![epic_1](documentation/images/epic_1.png)
+
+![epic_2](documentation/images/epic_2.png)
+
+![epic_3](documentation/images/epic_3.png)
+
+![epic_4](documentation/images/epic_4.png)
+
+### Implemented User Stories
+
+- **#1** As a Site owner I can access the admin panel, so I can see and update all of the informations, accept comments and remove inappropriate or spammy blog posts and comments, delete users.
+- **#2** As a Site User I can see a list of blog posts, so I can choose which post I want to read more about.
+- **#3** As a Site User I can click on a blog post, so I can read and take part in the content of the post.
+- **#5** As a Registered User I can log in and out of my account, so I can access my saved blog posts, as well as write new posts.
+- **#6** As a User I can upload a blog post with a title, content and a photo.
+- **#7** As a User I can edit my existing blog posts, so I can update them with new information or corrections
+- **#8** As a User I can create draft posts, so I can finish writing the content later.
+- **#9** As a User I can delete my blog posts, so I can decide which blog posts I no longer want to be available on the platform.
+- **#10** As a User I can** leave comments on a post **, so I can ask questions, provide feedback, or share my thoughts.
+- **#11** As a User I can edit my profile, so I can keep the information upto date
+- **#16** As a User I can view my profile, so I can see the Blog post I've submitted, my liked blog posts, and saved blog posts
+- **#19** As a User I can reset my password, so I can access my account even if I have forgotten my password
+
+### Not implemented User Stories
+
+- **#4** As a Site User I can create an account with a unique username and password, so I can start sharing my experiences and tips, as well as manage my blog posts.
+- **#12** As a User I can use the contact form, so I can contact the admin of the blog
+- **#13** As a Developer I need to implement different error pages, so I can alert users when something goes wrong
+- **#14** As a Site User I can easily access the "About" page, so I can find out the purpose of the blog and find a link to another page for more in-depth information.
+- **#15** As a User I can like and save blog posts that I find interesting, so I can access them later in my saved blog posts
+- **#17** As a User I can delete my profile, so it will be removed from the database
+- **#18** As a User I can visit other people's profiles, so I can read their bios
+- **#20** As a User I can edit and delete my comments, so I can manage my comments on the blog.
+- **#22**  As a Site user I can access a page with a medical information, so I can read and gain a more in-depth understanding of what the syndrome entails.
+- **#23** As a User I can be notified when someone comments on one of my blog posts, so I can respond if necessary
+
+
 ### Flowchart
 I drew a flowchart using [Figma](https://www.figma.com/) and my ipad,
 
 ![flowchart](documentation/images/flowchart.png)
 
-### Wireframes
 ### Entity Relational Diagram
 
 As part of designing my website, I planned and drew my models on my Ipad using [Figma](https://www.figma.com/).
 The planned models may differ from the result, and some planned models may not be implanted in the final result
 
 ![erd-diagram](documentation/entity_relational_diagram/erd-diagram.png)
+
+
+## Design
+### Wireframes
+#### Colour Scheme
+
+### Features
+### Future Features
 
 ## Security
 ### Cross-Site Request Forgery (CSRF) Protection
@@ -124,10 +163,6 @@ The planned models may differ from the result, and some planned models may not b
 - Certain features, such as creating, editing, or deleting blog posts and profiles, are reserved for authenticated users only.
 - By requiring users to be logged in to access these features, the application enhances security and ensures that sensitive operations are performed by authorized individuals only.
 
-
-## Surface
-### Design
-#### Colour Scheme
 #### Typography
 
 ## Languages/Technolgies
