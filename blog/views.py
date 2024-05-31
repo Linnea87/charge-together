@@ -4,7 +4,7 @@ from django.views.generic import (
     UpdateView
 
 )
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 

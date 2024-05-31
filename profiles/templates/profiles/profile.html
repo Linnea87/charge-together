@@ -38,28 +38,6 @@
 </div>
 
 
-
-<!-- <div class="container p-4">
-    <div class="profile">
-        <div class="profile-info">
-            <div class="profile-img text-center">
-                {% if profile.image.url is not none %}
-                <img src="{{ profile.image.url }}" alt="{{ profile.user.username }}'s profile image">
-                {% else %}
-                <img src="{% static '/icons/no-image-photography-icon.webp' %}" alt="Image not found icon">
-                {% endif %}
-            </div>
-            <h1>{{ profile.user.username }}</h1>
-            <p><strong>Joined: </strong>{{ profile.user.date_joined|date:'d M Y' }}</p>
-            <p><strong>Post: </strong>{{ profile.user.post_owner.count }}</p>
-            {% if profile.bio is not none %}
-            {{ profile.bio|safe }}
-            {% endif %}
-
-           
-        </div>
-    </div>
-</div>  -->
 <div class="latest-bg">
     <h2 class="text-center pb-4">Latest Post</h2>
     <div class="latest-card-container d-flex flex-row flex-wrap justify-content-center">
