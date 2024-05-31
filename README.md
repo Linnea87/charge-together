@@ -96,8 +96,17 @@ The target audience includes parents, siblings, grandparents, aunts, uncles, cou
 ### Future Features
 ## Skeleton
 ### Flowchart
+I drew a flowchart using [Figma](https://www.figma.com/) and my ipad,
+
+![flowchart](documentation/images/flowchart.png)
+
 ### Wireframes
 ### Entity Relational Diagram
+
+As part of designing my website, I planned and drew my models on my Ipad using [Figma](https://www.figma.com/).
+The planned models may differ from the result, and some planned models may not be implanted in the final result
+
+![erd-diagram](documentation/entity_relational_diagram/erd-diagram.png)
 
 ## Security
 ### Cross-Site Request Forgery (CSRF) Protection
