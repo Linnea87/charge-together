@@ -108,7 +108,7 @@ To implement agile planning, I wrote four different epics and divided each epic 
 - **#7** As a User I can edit my existing blog posts, so I can update them with new information or corrections
 - **#8** As a User I can create draft posts, so I can finish writing the content later.
 - **#9** As a User I can delete my blog posts, so I can decide which blog posts I no longer want to be available on the platform.
-- **#10** As a User I can** leave comments on a post **, so I can ask questions, provide feedback, or share my thoughts.
+- **#10** As a User I can leave comments on a post, so I can ask questions, provide feedback, or share my thoughts.
 - **#11** As a User I can edit my profile, so I can keep the information upto date
 - **#16** As a User I can view my profile, so I can see the Blog post I've submitted, my liked blog posts, and saved blog posts
 - **#19** As a User I can reset my password, so I can access my account even if I have forgotten my password
