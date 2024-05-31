@@ -1,9 +1,11 @@
 {% load static %}
 
-<!-- Logo for large screens -->
+
+  
+
 <header>
   {% with request.resolver_match.url_name as url_name %}
-    <nav class="navbar navbar-expand-lg" data-bs-target="dark">
+    <nav class="navbar navbar-expand-lg" data-bs-target="light">
       <div class="container-fluid">
         <!-- Logo -->
         <a class="navbar-brand" href="#"><img src="{% static 'images/logo.webp' %}" alt="Charge Together Logo" class="logo"></a>
@@ -61,5 +63,8 @@
         </div>
       </div>
     </nav>
-  {% endwith %}
+  {% endwith %} 
+  <div class="hero container-fluid">
+    <img style="width:100%;" src="{% static 'images/carl-hunley-jr-kZ_GzLAy4WM-unsplash.webp' %}" alt="image">
+  </div>
 </header>
