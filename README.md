@@ -169,8 +169,18 @@ you need to install the dependencies using the *pip install -r requirements.txt*
 ### Responsiveness
 ### User Stories Testing
 ## Bugs
+
+On the post_detail page I got a bug on the comment function, I couldn't leave a comment from the frontend
+
+![bug1](documentation/images/bug_1.png)
+
 ### Solved Bugs
+In my view, I had only linked comments to the blog post itself. I fixed the bug by also linking the comment to the user.
+
+![bug1](documentation/images/fixed_bug_1.png)
+
 ### Unresolved Bugs
+I currently have no bugs I am aware of.
 ## Credits
 ### Websites
 ### Resources
