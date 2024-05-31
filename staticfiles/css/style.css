@@ -13,6 +13,8 @@
     --black: #000000;
     --sky-blue:#98cae0;
     --bleu-de-france: #3083dd;
+    --soft-green:#6a8c8f30;
+    --grey-green:#24494c71;
     
     /* Utils */
     --small-box-shadow: 1px 4px 7px 0 #00000061;
@@ -41,7 +43,7 @@ main {
 
 .btn-like {
     border: none;
-    background-color: white;
+    background-color:var(--white);
     font-size: 16px;
 }
 
@@ -49,16 +51,29 @@ hr {
     width: 95%;
 }
 
+.card-comment {
+    border: 1px solid var(--grey-green);
+    border-radius: 8px;
+    margin-block: 1rem;
+    margin-bottom: 1rem;
+    width: 30rem;
+    padding: 1rem 1rem 1rem;
+    height: 90%;
+    
+    
+
+}
 /* Footer */
 
 footer {
-    flex-shrink: 0;
-    background: #7D6978;
+    flex-shrink: 1;
+    background-color:var(--grey-green);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+
 
 .social-icon {
     height: 2rem;
@@ -67,28 +82,26 @@ footer {
 /* Header and Navigation */
 
 .navbar {
-    background:#7D6978;
+    background: var(--white);
    
 }
 
 
-
 a.nav-link {
-    color: var(--white);
-    background-color: #7D6978;
+    color: var(--black);
 }
 
 
 
 img.logo {
-    width:18.75rem; 
+    width:25rem; 
     padding-top: 1rem;
     padding-left: 1rem;
 }
 
 
 .active {
-    border-bottom: 1px solid var(--dark-purple);
+    border-bottom: 1px solid var(--grey-green);
     font-weight: 500;
 }
 
@@ -104,16 +117,13 @@ img.logo {
 }
 
 
-.btn {
-    background: #7d6978;
-}
-
 /* Styling Blog Post */
 
 .card {
     width: 20rem;
     padding: 1rem 1rem 1rem;
     height: 90%;
+    box-shadow: var(--small-box-shadow);
 }
 
 .card img {
@@ -141,30 +151,40 @@ img.logo {
     display:flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: var(--small-box-shadow);
+    border-radius: 8px;
+    border: 1px solid var(--grey-green);
+   
 }
 
 .post-container {
     display: flex;
     flex-direction: column;
-    
+    background-color: var(--soft-green);
+    border-radius: 8px;
 }
 
 .post-detail {
     width: 100%;
+    
 }
 
 .post-detail a {
    text-decoration: none;
 }
+
 .post-img {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 8px;
+   
 }
 
 .post-pic {
     width: 100%;
     height: auto;
+    border-radius: 8px;
 }
 
 
@@ -181,14 +201,20 @@ img.logo {
 }
 
 .profile-card {
-    border: solid #7d69786b;
+    border: solid var(--grey-green);
     border-radius: 9px;
     margin-top:  2rem;
    
 }
 
+.post-cont {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 .latest-bg {
-    background-color:#7d69786b;
+    background-color:var(--soft-green);
     margin-top: 4rem;
     margin-bottom: 4rem;
    
@@ -221,7 +247,8 @@ img.logo {
 
     .post-info {
         flex-direction: row;
-        border: 1px solid var(--black);
+        border: 1px solid var(--grey-green);
+       
        
     }
     .post-img {
