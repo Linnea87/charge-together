@@ -203,11 +203,11 @@ img.logo {
    
 }
 
-.post-cont {
+/* .post-cont {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-}
+} */
 
 .latest-bg {
     background-color:var(--soft-green);
@@ -217,17 +217,21 @@ img.logo {
 }
 
 .about-bg {
+    padding: 1rem;
     background-color: var(--soft-green);
 }
+
 .about-card {
-    margin-top: 20px;
+    margin-top: 1rem;
+    padding-top: 2rem;
 
 }
 
 .about-card img {
-    padding-top: 1rem;
-    width: 18rem;
-    padding-left: 2rem;
+   border-radius: 8px;
+    width: 20rem;
+    margin-left: 5rem;
+    
 }
 
 
