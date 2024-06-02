@@ -144,6 +144,8 @@ The planned models may differ from the result, and some planned models may not b
 ## Design
 ### Wireframes
 
+I used [Figma](https://www.figma.com/) as a tool when creating my wireframes.
+
 - Home
 
 ![home](documentation/images/home.png)
@@ -155,6 +157,27 @@ The planned models may differ from the result, and some planned models may not b
 - Contact
 
 ![contact](documentation/images/contact.png)
+
+- Register
+
+![register](documentation/images/register.png)
+
+- Login
+
+![login](documentation/images/login.png)
+
+- Profile
+
+![profile](documentation/images/profile.png)
+
+- Create Post
+
+![create post](documentation/images/create_post.png)
+
+- Logout
+
+![logout](documentation/images/logout.png)
+
 
 #### Colour Scheme
 
