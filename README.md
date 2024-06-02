@@ -103,28 +103,29 @@ To implement agile planning, I wrote four different epics and divided each epic 
 - **#1** As a Site owner I can access the admin panel, so I can see and update all of the informations, accept comments and remove inappropriate or spammy blog posts and comments, delete users.
 - **#2** As a Site User I can see a list of blog posts, so I can choose which post I want to read more about.
 - **#3** As a Site User I can click on a blog post, so I can read and take part in the content of the post.
-- **#5** As a Registered User I can log in and out of my account, so I can access my saved blog posts, as well as write new posts.
-- **#6** As a User I can upload a blog post with a title, content and a photo.
-- **#7** As a User I can edit my existing blog posts, so I can update them with new information or corrections
-- **#8** As a User I can create draft posts, so I can finish writing the content later.
-- **#9** As a User I can delete my blog posts, so I can decide which blog posts I no longer want to be available on the platform.
-- **#10** As a User I can leave comments on a post, so I can ask questions, provide feedback, or share my thoughts.
-- **#11** As a User I can edit my profile, so I can keep the information upto date
-- **#16** As a User I can view my profile, so I can see the Blog post I've submitted, my liked blog posts, and saved blog posts
-- **#19** As a User I can reset my password, so I can access my account even if I have forgotten my password
+- **#4** As a Site User I can easily access the "About" page, so I can find out the purpose of the blog and find a link to another page for more in-depth information.
+- **#5** As a Site User I can create an account with a unique username and password, so I can start sharing my experiences and tips, as well as manage my blog posts.
+- **#6** As a Registered User I can log in and out of my account, so I can access my saved blog posts, as well as write new posts.
+- **#7** As a User I can upload a blog post with a title, content and a photo.
+- **#8** As a User I can edit my existing blog posts, so I can update them with new information or corrections
+- **#9** As a User I can create draft posts, so I can finish writing the content later.
+- **#10** As a User I can delete my blog posts, so I can decide which blog posts I no longer want to be available on the platform.
+- **#11** As a User I can leave comments on a post, so I can ask questions, provide feedback, or share my thoughts.
+- **#16** As a User I can edit my profile, so I can keep the information upto date
+- **#17** As a User I can reset my password, so I can access my account even if I have forgotten my password
 
 ### Not implemented User Stories
 
-- **#4** As a Site User I can create an account with a unique username and password, so I can start sharing my experiences and tips, as well as manage my blog posts.
-- **#12** As a User I can use the contact form, so I can contact the admin of the blog
-- **#13** As a Developer I need to implement different error pages, so I can alert users when something goes wrong
-- **#14** As a Site User I can easily access the "About" page, so I can find out the purpose of the blog and find a link to another page for more in-depth information.
-- **#15** As a User I can like and save blog posts that I find interesting, so I can access them later in my saved blog posts
-- **#17** As a User I can delete my profile, so it will be removed from the database
-- **#18** As a User I can visit other people's profiles, so I can read their bios
-- **#20** As a User I can edit and delete my comments, so I can manage my comments on the blog.
-- **#22**  As a Site user I can access a page with a medical information, so I can read and gain a more in-depth understanding of what the syndrome entails.
-- **#23** As a User I can be notified when someone comments on one of my blog posts, so I can respond if necessary
+- **#12** As a User I can like and save blog posts that I find interesting, so I can access them later in my saved blog posts
+- **#13** As a User I can view my profile, so I can see the Blog post I've submitted, my liked blog posts, and saved blog posts
+- **#14** As a User I can delete my profile, so it will be removed from the database
+- **#15** As a User I can visit other people's profiles, so I can read their bios
+- **#18** As a User I can edit and delete my comments, so I can manage my comments on the blog.
+- **#19** As a User I can use the contact form, so I can contact the admin of the blog
+- **#20**  As a Site user I can access a page with a medical information, so I can read and gain a more in-depth understanding of what the syndrome entails.
+- **#21** As a Developer I need to implement different error pages, so I can alert users when something goes wrong
+- **#22** As a User I can be notified when someone comments on one of my blog posts, so I can respond if necessary
+- **#23** As a User I can receive push notifications for new comments on the same blog posts I have commented on., so I can be updated in the conversion
 
 
 ### Flowchart
@@ -142,6 +143,19 @@ The planned models may differ from the result, and some planned models may not b
 
 ## Design
 ### Wireframes
+
+- Home
+
+![home](documentation/images/home.png)
+
+- About
+
+![about](documentation/images/about.png)
+
+- Contact
+
+![contact](documentation/images/contact.png)
+
 #### Colour Scheme
 
 ### Features
