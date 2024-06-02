@@ -219,6 +219,19 @@ img.logo {
    
 }
 
+.about-bg {
+    background-color: var(--soft-green);
+}
+.about-card {
+    margin-top: 20px;
+
+}
+
+.about-card img {
+    width: 18rem;
+    padding-left: 2rem;
+}
+
 
 
 /* .profile {
