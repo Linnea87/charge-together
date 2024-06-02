@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     "blog",
     "profiles",
     "contact",
+    'about',
     # Other
     "crispy_forms",
     "crispy_bootstrap5",
