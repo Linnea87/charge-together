@@ -212,6 +212,23 @@ you need to install the dependencies using the *pip install -r requirements.txt*
 ### Automated Testing
 ### Responsiveness
 ### User Stories Testing
+
+Here I have viewed the user stories in my GitHub project, and carefully gone through my acceptance criteria for each user story.
+If the criteria is met, it is marked in these tables below. 
+
+Finally the issue for each user story in my project has been closed if the acceptance criteria was met.
+
+- **EPIC 1 - A non-registered or registered user**.
+
+![epic1](documentation/images/EPIC1.png)
+
+- **EPIC 4 - The blogs Admin and Developer**
+
+![epic4](documentation/images/EPIC4.png)
+
+
+
+
 ## Bugs
 
 On the post_detail page I got a bug on the comment function, I couldn't leave a comment from the frontend
