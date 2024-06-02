@@ -14,6 +14,8 @@
                     {% if request.user == post.author %}
                         <a href="{% url 'edit_post' post.id %}"><small>Edit</small></a>
                         <a href="{% url 'delete_post' post.id %}"><small>Delete</a></small>
+                        {% else %}
+                        <a href="{{ post.authour.profile.user.url }}">Visit {{ post.author }}'s Profile</a>
                     {% endif %}
                 </p>
                 <hr>
@@ -46,9 +48,9 @@
                 <span class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }}</span> 
                 {% endif %} 
             </div>  
-            <!-- <div class="col-1">
+            <div class="col-1">
                 <span class="text-secondary"><i class="far fa-comments"></i> {{post.comments.count }}</span>  
-            </div> -->
+            </div>
         </div> 
    
         <br>
@@ -69,13 +71,14 @@
                     <br>
                     {{ comment.body|safe }}
                 </p>
+                {% if request.user == comment.user %}
+                <a href="{% url 'edit_comment' pk=post.pk %}"><small>Edit</small></a>
+            {% endif %}
             </div>
             {% empty %}
             <p>No comments here yet!</p>  
         </div>  
-        {% endfor %}   
+        {% endfor %} 
     </div>
    
 {% endblock content %}
-
-
