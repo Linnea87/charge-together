@@ -9,10 +9,7 @@
     
     /* Color */
     --white: #FFFFFF;
-    --off-white: #F7F8FA;
     --black: #000000;
-    --sky-blue:#98cae0;
-    --bleu-de-france: #3083dd;
     --soft-green:#6a8c8f30;
     --grey-green:#24494c71;
     
@@ -47,9 +44,10 @@ main {
     font-size: 16px;
 }
 
-hr {
-    width: 95%;
+.btn-edit {
+    margin-top:  1rem;
 }
+
 
 .card-comment {
     border: 1px solid var(--grey-green);
@@ -66,6 +64,7 @@ hr {
 /* Footer */
 
 footer {
+    height: fit-content;
     flex-shrink: 1;
     background-color:var(--grey-green);
     display: flex;
@@ -200,8 +199,6 @@ img.logo {
 }
 
 .profile-card {
-    border: solid var(--grey-green);
-    border-radius: 9px;
     margin-top:  2rem;
    
 }
@@ -228,6 +225,7 @@ img.logo {
 }
 
 .about-card img {
+    padding-top: 1rem;
     width: 18rem;
     padding-left: 2rem;
 }
