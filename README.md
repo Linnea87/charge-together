@@ -25,7 +25,22 @@ Here users can write and share their stories and experiences. And as new parents
     - [Wireframes](#wireframes)
     - [Colors](#color)
     - [Fonts](#font)
-- [Screenshots of Features](screenshoots-of-features)
+- [Screenshots of Features](#screenshoots-of-features)
+    - [Header](#header)
+    - [Landing Page](l#anding-page)
+    - [Blog page](#blog-page)
+    - [Detailview](#detailview)
+        - [Loged in Detailview](#loged-in-detailview)
+        - [Leave a Comment](#leave-a-comment)
+        - [The likes](#the-likes)
+    - [Create Post](#create-post)
+        - [Draft or Published](#draft-or-published)
+    - [Edit Post](#edit-post)
+    - [Delete Post](#delete-post)
+    - [Logout](#logout)
+    - [About Page](#about-page)
+    - [Contact Page](#contact-page)
+    - [Sign up/Sign In Page](#sign-upsign-in-page)
 - [Future Features](#future-features)
 - [Security](#security)
     - [Cross-Site Request Forgery (CSRF) Protection](#cross-site-request-forgery-csrf-protection)
@@ -90,6 +105,7 @@ The target audience includes parents, siblings, grandparents, aunts, uncles, cou
 To implement agile planning, I wrote four different epics and divided each epic into user stories. Each user story has acceptance criteria and tasks.  I also created three different labels, *Must have*, *Should have* and *Could have*. In this way I categorized my user stories so I had a clear picture which user stories I needed to prioritize first. This was the basis for the development of the projects features
 
 ### EPIC
+
 ![epic_1](documentation/images/epic_1.png)
 
 ![epic_2](documentation/images/epic_2.png)
@@ -253,13 +269,87 @@ If the users are logged in and clicks on their own blog post, the user can edit 
 
 ![new-comment](documentation/images/new-comment.png)
 
-### The likes
+#### The likes
 
 *The user can also see if they have liked or disliked the post. If they liked the post, the heart is black, and if they click again, they take their like back and the heart turns white. The numbers next to the heart increase if the user likes the post and decrease if they return their like*
 
 ![signed-in-liked](documentation/images/signed-in-liked.png)
 
 ![signedin-not-liked](documentation/images/signedin-not-liked.png)
+
+### Create Post
+
+*When users click on create post in the dropdown menu, they come to the create post form.T he user can choose to save the post as a draft or publish the post right away*
+
+![Create Post Form](documentation/images/createform_1.png)
+
+![Draft](documentation/images/status-draft.png)
+
+![Published](documentation/images/status-published.png)
+
+*If the user does not fill in all the fields in the form when they click the create post button, the user will be directed to the missing field and a blue frame will mark the missing field*
+
+![Missed field](documentation/images/createform-not-filled.png)
+
+#### Draft or Published
+
+*Regardless of whether the user chooses to save the post as a draft or publish, they are redirected to the blog page and the same successful message is displayed there.*
+
+![create post message](documentation/images/create-post-success.png)
+
+*But if the post is a draft, it only ends up on the user's profile under the latest post*
+
+![draft](documentation/images/draft-profile.png)
+
+*If the user chooses to publish the post immediately, it will appear both on the blog page with all other published posts and on the user's profile under the latest post.*
+
+![Published](documentation/images/published-blog-page.png)
+
+![Published](documentation/images/published-profile.png)
+
+### Edit Post
+
+*When the user chooses to edit their post, they are brought to the same form as when they created the post but this time it is already filled with the previous content and it is only for the user to add or remove content.*
+
+![Edit Post](documentation/images/edit-post.png)
+
+![Edit Post](documentation/images/edit-post-2.png)
+
+*When the user is satisfied and clicks on edit post, they are redirected to the blog page and can see that their update was successful. They can also see that the update was successful on their profile.*
+
+![Edit successful](documentation/images/updated-post.png)
+
+![Edit successful](documentation/images/updated-profile.png)
+
+### Delete Post
+
+*When the user clicks delete, they come to a page where they can either confirm or go back*
+
+![delete](documentation/images/delete-post.png)
+
+*If the user clicks on the back button, they are directed back to the detailview.*
+
+![Delete-back](documentation/images/cancel-delete.png)
+
+*If the user, on the other hand, clicks on confirm, they are directed to the blog page and can see that it was successful as the post that was deleted is no longer among the most recent blog posts. The deleted post also disappears from the user's profile as confirmation that it was successfully deleted.*
+
+![Delete-success](documentation/images/delete-success.png)
+
+![Delete-success](documentation/images/delete-success-profile.png)
+
+### Logout
+
+*When the user clicks on log out in the dropdown menu, they will be taken to a page where they can choose to either log out or cancel.*
+
+![logout](documentation/images/logout-page.png)
+
+*If the user chooses to cancel, they are redirected back to their profile.*
+
+![cancel-logout](documentation/images/canceld-logout.png)
+
+*If the user chooses to confirm, they are redirected to the landing page with a successful message.*
+
+![success-logout](documentation/images/signedout-success.png)
 
 ### About Page
 
@@ -275,18 +365,16 @@ If the users are logged in and clicks on their own blog post, the user can edit 
 
 ![contact](documentation/images/contact.png)
 
-*Here users can register if they want to become part of the community. If they are already part of this community, they will be directed to the sign in form.*
 
 ### Sign up/Sign In Page
+
+*Here users can register if they want to become part of the community. If they are already part of this community, they will be directed to the sign in form and*
 
 ![sig up](documentation/images/signup.png)
 
 *Here the users log in, if they are not already part of the community they are directed to the sign up form.*
 
 ![sig in](documentation/images/signin.png)
-
-
-
 
 
 
