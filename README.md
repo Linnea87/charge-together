@@ -165,7 +165,7 @@ I used [Figma](https://www.figma.com/) as a tool when creating my wireframes.
 
 - Home
 
-![home](documentation/images/home.png)
+![home](documentation/wireframes/home.png)
 
 - About
 
