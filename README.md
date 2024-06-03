@@ -23,9 +23,9 @@ Here users can write and share their stories and experiences. And as new parents
     - [Entity Relational Diagram](#entity-relational-diagram)
 - [Design](#design)
     - [Wireframes](#wireframes)
-    - [Colour Scheme](#colour-scheme)
-    - [Typography](#typography)
-- [Features](#features)
+    - [Colors](#color)
+    - [Fonts](#font)
+- [Screenshots of Features](screenshoots-of-features)
 - [Future Features](#future-features)
 - [Security](#security)
     - [Cross-Site Request Forgery (CSRF) Protection](#cross-site-request-forgery-csrf-protection)
@@ -142,6 +142,7 @@ The planned models may differ from the result, and some planned models may not b
 
 
 ## Design
+
 ### Wireframes
 
 I used [Figma](https://www.figma.com/) as a tool when creating my wireframes.
@@ -152,37 +153,145 @@ I used [Figma](https://www.figma.com/) as a tool when creating my wireframes.
 
 - About
 
-![about](documentation/images/about.png)
+![about](documentation/wireframes/about.png)
 
 - Contact
 
-![contact](documentation/images/contact.png)
+![contact](documentation/wireframes/contact.png)
 
 - Register
 
-![register](documentation/images/register.png)
+![register](documentation/wireframes/register.png)
 
 - Login
 
-![login](documentation/images/login.png)
+![login](documentation/wireframes/login.png)
 
 - Profile
 
-![profile](documentation/images/profile.png)
+![profile](documentation/wireframes/profile.png)
 
 - Create Post
 
-![create post](documentation/images/create_post.png)
+![create post](documentation/wireframes/create_post.png)
 
 - Logout
 
-![logout](documentation/images/logout.png)
+![logout](documentation/wireframes/logout.png)
 
 
-#### Colour Scheme
+### Colors
 
-### Features
-### Future Features
+I used the [Color](https://coolors.co) tool 'image picker' where I used the header image to get compatible colors. I chose a gray green color from the image that I also lowered the saturation so I got a lighter green with it.
+
+- Soft-Green; #6a8c8f30
+- Grey-Green: #24494c71
+
+### Fonts
+
+- I chose to have Gb Garamond for the main headings as it is beautiful in its simplicity and readable, I chose serif as the fallback font.
+- For the paragraphs I chose to have Roboto as it is also beautiful in its simplicity and readable, and here again I chose serif as the fallback font
+
+## Screenshots of Features 
+
+**Below you can see screenshots of how the blog looks, both as a non-logged-in user and as a logged-in user.**
+
+### Header
+
+*This is what the header looks like when you are not logged in. The logo is a simple design that I made myself.  The page that is active is marked with a solid line.*
+
+![header not signed in](documentation/images/header-not-signed-in.png)
+
+*When the user are logged in, the header changes and instead of register and login the user now see their own username.*
+*And in the dropdown menu the user can go to their profile, create a blog post or log out*
+
+![signed in header](documentation/images/header-signed-in.png)
+
+### Landing Page
+
+*This is the landing page, beautiful and inviting in its simplicity.*
+
+![home page](documentation/images/home_page.png)
+
+*When the user logs in, they come to the landing page and here a message is displayed that the user is logged in with their username*
+
+![signed in](documentation/images/signed-in-message.png)
+
+### Blog page
+
+*This page shows all the blog posts available. Here, the user also sees how many people have liked and commented on the posts*
+
+![Blog page](documentation/images/blogpage.png)
+
+### Detailview
+
+*Users can click on a post to read a more detailed text. here too the users can see how many people have liked the post and who has left a comment. To like or leave a comment, the users needs to be logged in or create an account.*
+
+![Detailview-not-signed-in-1](documentation/images/detailview-not-signed-in-1.png)
+
+![Detailview-not-signed-in-2](documentation/images/detailview-not-signed-in-2.png)
+
+#### Loged in Detailview
+
+If the users are logged in and clicks on their own blog post, the user can edit or delete their own post. And they can leave a comment
+
+![Detailview-signed-in-1](documentation/images/detailview-signed-in-1.png)
+
+![Detailview-signed-in-2](documentation/images/detailview-signed-in-2.png)
+
+#### Leave a Comment
+
+*When the users press the button, They will be taken to a form where they can leave their comment*
+
+![comment-form](documentation/images/comment-form.png)
+
+*After pressing the Submit button, users are returned to the blog page and receive a notification that their comment has been submitted.*
+
+![comment-message](documentation/images/comment-message.png)
+
+*When the user returns to the post, they can now see their own comment*
+
+![new-comment](documentation/images/new-comment.png)
+
+### The likes
+
+*The user can also see if they have liked or disliked the post. If they liked the post, the heart is black, and if they click again, they take their like back and the heart turns white. The numbers next to the heart increase if the user likes the post and decrease if they return their like*
+
+![signed-in-liked](documentation/images/signed-in-liked.png)
+
+![signedin-not-liked](documentation/images/signedin-not-liked.png)
+
+### About Page
+
+*Here the users can read about why the blog was created and its purpose. Here is also a link if the users want to read  more in-depth facts about Charge syndrome*
+
+![About1](documentation/images/about1.png)
+
+![About2](documentation/images/about2.png)
+
+*Here, users can get in touch with the web owner*
+
+### Contact Page
+
+![contact](documentation/images/contact.png)
+
+*Here users can register if they want to become part of the community. If they are already part of this community, they will be directed to the sign in form.*
+
+### Sign up/Sign In Page
+
+![sig up](documentation/images/signup.png)
+
+*Here the users log in, if they are not already part of the community they are directed to the sign up form.*
+
+![sig in](documentation/images/signin.png)
+
+
+
+
+
+
+
+## Future Features
 
 ## Security
 ### Cross-Site Request Forgery (CSRF) Protection
@@ -262,9 +371,6 @@ Finally the issue for each user story in my project has been closed if the accep
 - **EPIC 4 - The blogs Admin and Developer**
 
 ![epic4](documentation/images/EPIC4.png)
-
-
-
 
 ## Bugs
 
