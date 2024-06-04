@@ -27,7 +27,6 @@ class PostList(ListView):
     model = Post
     template_name = "blog/blog.html"
     queryset = Post.objects.filter(status=1).order_by("-created_on")
-    paginate_by = 6
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -35,7 +34,6 @@ class PostList(ListView):
         for post in context['post_list']:
             post.comment_count = post.comments.count()
         return context
-
 
 class PostLike(DetailView):
 
@@ -78,6 +76,7 @@ class CreatePost(LoginRequiredMixin, CreateView):
     template_name = "blog/create_post.html"
     form_class = PostForm
     success_url = "/blog/"
+    queryset = Post.objects.filter(status=1)
 
     def form_valid(self, form):
         form.instance.author = self.request.user  
@@ -131,6 +130,8 @@ class NewComment(LoginRequiredMixin, CreateView):
         form.instance.user= self.request.user
         messages.success(self.request, 'Thank you for your comment!')
         return super().form_valid(form)
+    
+    
     
 # class EditComment(LoginRequiredMixin, UpdateView):
 #     """

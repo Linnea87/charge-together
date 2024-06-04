@@ -8,21 +8,19 @@
             <div class="post-img">
                 <img src="{{ post.image.url }}" alt="post.image_alt" class="post-pic">
             </div>
-            <div class="post-detail">
+            <div  class="post-detail">
                 <h1 class="text-center">{{ post.title }}</h1>
                 <p class="text-center"><small>Written by {{post.author}} on {{post.created_on}}</small><br>
                     {% if request.user == post.author %}
                         <a href="{% url 'edit_post' post.id %}"><small>Edit</small></a>
                         <a href="{% url 'delete_post' post.id %}"><small>Delete</a></small>
-                        {% else %}
-                        <a href="{{ post.authour.profile.user.url }}">Visit {{ post.author }}'s Profile</a>
                     {% endif %}
                 </p>
                 <hr>
-                <p class="p-3">{{post.excerpt}}</p>  
+                <p class="p-3">{{post.excerpt}}</p>    
             </div>
-        </div>
-        <div class="post-container m-4">
+        </div>        
+          <div class="post-container m-4">
             <div class="content p-5">
                 <p>{{post.content|safe}}</p>
             </div>
@@ -71,9 +69,6 @@
                     <br>
                     {{ comment.body|safe }}
                 </p>
-                {% if request.user == comment.user %}
-                <a href="{% url 'edit_comment' pk=post.pk %}"><small>Edit</small></a>
-            {% endif %}
             </div>
             {% empty %}
             <p>No comments here yet!</p>  
@@ -82,3 +77,5 @@
     </div>
    
 {% endblock content %}
+
+
