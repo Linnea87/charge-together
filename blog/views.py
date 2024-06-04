@@ -66,7 +66,6 @@ class PostDetail(DetailView):
         data['post_is_liked'] = liked
         return data
      
-    
 
 class CreatePost(LoginRequiredMixin, CreateView):
     """
@@ -80,7 +79,10 @@ class CreatePost(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user  
-        messages.success(self.request, 'Your request was successful!')
+        if form.instance.status == 0:
+            messages.success(self.request, 'Your draft are saved')
+        else:
+            messages.success(self.request, 'Your post are Published!')
         return super(CreatePost, self).form_valid(form)
 
 
