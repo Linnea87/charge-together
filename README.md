@@ -42,6 +42,7 @@ Here users can write and share their stories and experiences. And as new parents
     - [Contact Page](#contact-page)
     - [Sign up](#sign-up)
     - [Sign In](#sign-in)
+    - [Various ERRORS](#various-errors)
 - [Future Features](#future-features)
 - [Security](#security)
     - [Cross-Site Request Forgery (CSRF) Protection](#cross-site-request-forgery-csrf-protection)
@@ -128,13 +129,13 @@ To implement agile planning, I wrote four different epics and divided each epic 
 - **#9** As a User I can create draft posts, so I can finish writing the content later.
 - **#10** As a User I can delete my blog posts, so I can decide which blog posts I no longer want to be available on the platform.
 - **#11** As a User I can leave comments on a post, so I can ask questions, provide feedback, or share my thoughts.
+- **#12** As a User I can like blog posts that I find interesting.
 - **#16** As a User I can edit my profile, so I can keep the information upto date
 - **#17** As a User I can reset my password, so I can access my account even if I have forgotten my password
 
 ### Not implemented User Stories
 
-- **#12** As a User I can like and save blog posts that I find interesting, so I can access them later in my saved blog posts
-- **#13** As a User I can view my profile, so I can see the Blog post I've submitted, my liked blog posts, and saved blog posts
+- **#13** As a User I can view my profile, so I can see the Blog post I've submitted.
 - **#14** As a User I can delete my profile, so it will be removed from the database
 - **#15** As a User I can visit other people's profiles, so I can read their bios
 - **#18** As a User I can edit and delete my comments, so I can manage my comments on the blog.
@@ -143,6 +144,7 @@ To implement agile planning, I wrote four different epics and divided each epic 
 - **#21** As a Developer I need to implement different error pages, so I can alert users when something goes wrong
 - **#22** As a User I can be notified when someone comments on one of my blog posts, so I can respond if necessary
 - **#23** As a User I can receive push notifications for new comments on the same blog posts I have commented on., so I can be updated in the conversion
+- **#28** As a User I can see all the blog post i have liked on my profile, so I can easily go back and read them again
 
 
 ### Flowchart
@@ -411,6 +413,23 @@ If the users are logged in and clicks on their own blog post, the user can edit 
 
 ![wrong password or username](documentation/images/wrong-password.png)
 
+### Various ERRORS
+
+
+*If a user tries to do something they are not authorized to do, a 403 error is displayed.*
+
+![403 error](documentation/images/edit-someone-else-blog-post.png)
+
+*When the user tries to reach a page that does not exist, a 404 error is displayed.*
+
+![404-error](documentation/images/error-404.png)
+
+*if there is some internal error with the page, 500 error is displayed with a message.*
+
+![500-error](documentation/images/500-error.png)
+
+
+
 ## Future Features
 
 ## Security
@@ -486,11 +505,11 @@ Finally the issue for each user story in my project has been closed if the accep
 
 - **EPIC 1 - A non-registered or registered user**.
 
-![epic1](documentation/images/EPIC1.png)
+![epic1](documentation/images/epic1-test.png)
 
 - **EPIC 4 - The blogs Admin and Developer**
 
-![epic4](documentation/images/EPIC4.png)
+![epic4](documentation/images/epic4-test.png)
 
 ## Bugs
 
