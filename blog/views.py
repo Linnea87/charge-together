@@ -19,6 +19,7 @@ from .models import Post, Comment
 from .forms import PostForm, CommentForm
 
 
+
 class PostList(ListView):
     """
     view all blog posts
@@ -26,6 +27,15 @@ class PostList(ListView):
     model = Post
     template_name = "blog/blog.html"
     queryset = Post.objects.filter(status=1).order_by("-created_on")
+    paginate_by = 6
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # Calculate comment count for each post
+        for post in context['post_list']:
+            post.comment_count = post.comments.count()
+        return context
+
 
 class PostLike(DetailView):
 
@@ -70,7 +80,8 @@ class CreatePost(LoginRequiredMixin, CreateView):
     success_url = "/blog/"
 
     def form_valid(self, form):
-        form.instance.author = self.request.user
+        form.instance.author = self.request.user  
+        messages.success(self.request, 'Your request was successful!')
         return super(CreatePost, self).form_valid(form)
 
 
@@ -83,6 +94,10 @@ class EditPost(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     success_url = "/blog/"
     form_class = PostForm
     
+    def form_valid(self, form):
+        messages.success(self.request, 'Your post are updated!')
+        return super().form_valid(form)
+
     def test_func(self):
         return self.request.user == self.get_object().author
 
@@ -92,9 +107,14 @@ class DeletePost(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """
     model = Post
     success_url = "/blog/"
-    
+
+    def form_valid(self, form):
+        messages.success(self.request, 'Your post are deleted!')
+        return super().form_valid(form)
+   
     def test_func(self):
         return self.request.user == self.get_object().author
+    
     
 
 class NewComment(LoginRequiredMixin, CreateView):
@@ -109,5 +129,30 @@ class NewComment(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
         form.instance.user= self.request.user
-        messages.success(self.request, 'Your success message here.')
+        messages.success(self.request, 'Thank you for your comment!')
         return super().form_valid(form)
+    
+# class EditComment(LoginRequiredMixin, UpdateView):
+#     """
+#     The User can edit their own existing comments
+#     """
+    
+#     model = Comment
+#     success_url = "/blog/"
+#     form_class = CommentForm
+#     template_name = "blog/edit_comment.html"
+
+
+#     def form_valid(self, form):
+#         form.instance.post_id = self.kwargs['pk']
+#         form.instance.user= self.request.user
+#         messages.success(self.request, 'Your comment was sent successfully.')
+#         return super().form_valid(form)
+
+
+    
+
+
+
+
+#     
