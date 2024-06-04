@@ -40,7 +40,8 @@ Here users can write and share their stories and experiences. And as new parents
     - [Logout](#logout)
     - [About Page](#about-page)
     - [Contact Page](#contact-page)
-    - [Sign up/Sign In Page](#sign-upsign-in-page)
+    - [Sign up](#sign-up)
+    - [Sign In](#sign-in)
 - [Future Features](#future-features)
 - [Security](#security)
     - [Cross-Site Request Forgery (CSRF) Protection](#cross-site-request-forgery-csrf-protection)
@@ -229,9 +230,6 @@ I used the [Color](https://coolors.co) tool 'image picker' where I used the head
 
 ![home page](documentation/images/home_page.png)
 
-*When the user logs in, they come to the landing page and here a message is displayed that the user is logged in with their username*
-
-![signed in](documentation/images/signed-in-message.png)
 
 ### Blog page
 
@@ -315,11 +313,17 @@ If the users are logged in and clicks on their own blog post, the user can edit 
 
 ![Edit Post](documentation/images/edit-post-2.png)
 
-*When the user is satisfied and clicks on edit post, they are redirected to the blog page and can see that their update was successful. They can also see that the update was successful on their profile.*
+*When the user is satisfied and clicks on edit post, they are redirected to the blog page where they receive a successful message and can see that their update was successful when the new update is displayed. They can also see that the update was successful on their profile.*
+
+![Edit successful](documentation/images/post-updated.png)
 
 ![Edit successful](documentation/images/updated-post.png)
 
 ![Edit successful](documentation/images/updated-profile.png)
+
+*if a user who is not authorized tries to access another user's blog post and edits, this error page is displayed*
+
+![Edit error](documentation/images/edit-someone-else-blog-post.png)
 
 ### Delete Post
 
@@ -331,7 +335,9 @@ If the users are logged in and clicks on their own blog post, the user can edit 
 
 ![Delete-back](documentation/images/cancel-delete.png)
 
-*If the user, on the other hand, clicks on confirm, they are directed to the blog page and can see that it was successful as the post that was deleted is no longer among the most recent blog posts. The deleted post also disappears from the user's profile as confirmation that it was successfully deleted.*
+*If, however, the user clicks on confirm, they are directed to the blog page where they receive a success message and see that it was successful, as the post that was deleted is no longer among the most recent blog posts. The deleted post also disappears from the user's profile as further confirmation that it has been removed.*
+
+![Delete-success](documentation/images/post-deleted.png)
 
 ![Delete-success](documentation/images/delete-success.png)
 
@@ -353,31 +359,57 @@ If the users are logged in and clicks on their own blog post, the user can edit 
 
 ### About Page
 
-*Here the users can read about why the blog was created and its purpose. Here is also a link if the users want to read  more in-depth facts about Charge syndrome*
+*Here the users can read about why the blog was created and its purpose. Here is also a link if the users want to read  more in-depth facts about Charge syndrome. When the user clicks on the link, that page opens in a new window.*
 
 ![About1](documentation/images/about1.png)
 
 ![About2](documentation/images/about2.png)
 
-*Here, users can get in touch with the web owner*
 
 ### Contact Page
 
+*Here, users can get in touch with the web owner*
+
 ![contact](documentation/images/contact.png)
 
+*Once the user has filled out the contact form and clicked the send button, they will receive a thank you message letting them know their message was sent successfully.*
 
-### Sign up/Sign In Page
+![contact-success](documentation/images/contact-success.png)
+
+
+### Sign Up
 
 *Here users can register if they want to become part of the community. If they are already part of this community, they will be directed to the sign in form and*
 
-![sig up](documentation/images/signup.png)
+![sign up](documentation/images/signup.png)
+
+*When the user is about to register and enters either a shortened password, only numbers, a password that is too common or that the passwords do not match, this is shown on the screen with an explanation in red text. This applies even if the user were to fill in a username that already exists*
+
+![Error sign up](documentation/images/password-to-short.png)
+
+![Error sign up](documentation/images/commen-numeric-password.png)
+
+![Error sign up](documentation/images/not-same-password.png)
+
+![Error sign up](documentation/images/existing-username.png)
+
+*When the user has filled in the registration form correctly, they are redirected to the landing page with a successful message*
+
+![Success sign up](documentation/images/signed-up-success.png)
+
+### Sign In
 
 *Here the users log in, if they are not already part of the community they are directed to the sign up form.*
 
-![sig in](documentation/images/signin.png)
+![sign in](documentation/images/signin.png)
 
+*When the user logs in, they come to the landing page and here a message is displayed that the user is logged in with their username*
 
+![signed in](documentation/images/signed-in-message.png)
 
+*When the user fills in the password or username, this red text is displayed.*
+
+![wrong password or username](documentation/images/wrong-password.png)
 
 ## Future Features
 
