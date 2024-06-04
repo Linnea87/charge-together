@@ -33,31 +33,46 @@
 <body>
     <!-- Header -->
     {% include "includes/header.html" %}
-
-    
+ 
+    <!-- Django messages -->
     <div class="container">
         <div class="row">
-            <div class="col-md-8 offset-md-2">
+            <div class="col-md-8 offset-md-2 p-2">
                 {% for message in messages %}
-                <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">{{ message | safe }}
+                {% if message.tags == 'success' %}
+                <div class="alert alert-success {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                    {{ message | safe }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
+                {% elif message.tags == 'error' %}
+                <div class="alert alert-danger {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                    {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
-    </div> 
+    </div>
     <main>
         {% block content %}
 
         {% endblock content %}
     </main>
-
     <!-- Footer-->
     {% include "includes/footer.html" %}
-
+    
+   
     {% block extra_js %}
     
     {% endblock extra_js %}
-
+    <script>
+        setTimeout(function () {
+            let messages = document.getElementById('msg');
+            let alert = new bootstrap.Alert(messages);
+            alert.close();
+        }, 2000);
+    </script>
+     
 </body>
 </html>
