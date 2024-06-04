@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Home{% endblock title %}
 
 
@@ -15,6 +15,7 @@
             CHARGE syndrome presents a variety of challenges, but you are not alone. Our blog aims to 
             provide personal stories and practical tips, to help you better understand and manage the
             journey of living with CHARGE syndrome. <br>
+            
             Whether you are a parent, sibling, grandparent, or extended family member, this blog is 
             designed to offer you the knowledge and encouragement needed to support your loved one. 
             We celebrate the resilience, strength, and love that binds families together in the face of CHARGE syndrome.
@@ -22,17 +23,7 @@
             touched by CHARGE syndrome!
         </p>
     </section>
-    <section>
-        <div class="post-cont">
-            {% for post in posts.all %} 
-                <a href="{% url 'post_detail' post.id %}" class="img-container">
-                    <img src="{{post.image.url}}" alt="{{post.image_alt}}" style="width: 100%">
-                    <div class="centered"><h2>{{post.title}}</h2></div>
-                </a>
-            {% endfor %}
-        </div>
-    </section>
-</div>
+   
 
 {% endblock content %}
 
