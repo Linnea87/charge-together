@@ -293,15 +293,17 @@ If the users are logged in and clicks on their own blog post, the user can edit 
 
 #### Draft or Published
 
-*Regardless of whether the user chooses to save the post as a draft or publish, they are redirected to the blog page and the same successful message is displayed there.*
+The user can choose to save their post as a draft or publish the post directly.
 
-![create post message](documentation/images/create-post-success.png)
+*if the user chooses to save the post as a draft, a success message is displayed and the post is displayed only on the user's profile page*
 
-*But if the post is a draft, it only ends up on the user's profile under the latest post*
+![draft](documentation/images/draft.png)
 
 ![draft](documentation/images/draft-profile.png)
 
-*If the user chooses to publish the post immediately, it will appear both on the blog page with all other published posts and on the user's profile under the latest post.*
+*If the user chooses to publish the post immediately, a success message will appear and the post will appear on both the blog page with all other published posts and on the user's profile page.*
+
+![Published](documentation/images/published-success.png)
 
 ![Published](documentation/images/published-blog-page.png)
 
@@ -427,7 +429,6 @@ If the users are logged in and clicks on their own blog post, the user can edit 
 *if there is some internal error with the page, 500 error is displayed with a message.*
 
 ![500-error](documentation/images/500-error.png)
-
 
 
 ## Future Features
