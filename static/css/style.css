@@ -1,26 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
 
-/* Main color and image */
 
 :root {
     /* Fonts */
     --title: 'EB Garamond', serif;
-    --main-font:'Roboto', serif;
-    
+    --main-font: 'Roboto', serif;
+
     /* Color */
     --white: #FFFFFF;
     --black: #000000;
-    --soft-green:#6a8c8f30;
-    --grey-green:#24494c71;
-    
+    --soft-green: #6a8c8f30;
+    --grey-green: #24494c71;
+
 
     /* Utils */
     --small-box-shadow: 1px 4px 7px 0 #00000061;
     --border: 1px solid #00000030;
 }
+
 /* Main Style setting */
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -30,25 +31,33 @@ body {
     font-family: var(--main-font);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--title);
 }
 
 main {
     flex: 1 0 auto;
-    background-color:var(--white);
+    background-color: var(--white);
 }
+
+/* Buttons */
 
 .btn-like {
     border: none;
-    background-color:var(--white);
+    background-color: var(--white);
     font-size: 16px;
 }
 
 .btn-edit {
-    margin-top:  1rem;
+    margin-top: 1rem;
 }
 
+/* Comments  */
 
 .card-comment {
     border: 1px solid var(--grey-green);
@@ -58,14 +67,15 @@ main {
     width: 30rem;
     padding: 1rem 1rem 1rem;
     height: 90%;
-    
+
 }
+
 /* Footer */
 
 footer {
     height: fit-content;
     flex-shrink: 1;
-    background-color:var(--grey-green);
+    background-color: var(--grey-green);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -77,34 +87,35 @@ footer {
     height: 2rem;
     margin: 1rem;
 }
+
 /* Header and Navigation */
 
 .navbar {
     background: var(--white);
-    
+
 }
 
 a.nav-link {
     color: var(--black);
-   
-    
+
+
 }
 
-
-.active{
+.active {
     border-bottom: 1px solid var(--grey-green);
-    
+
+
 }
 
 img.logo {
-    width:18.75rem; 
-    
+    width: 18.75rem;
+
 }
 
 
 
 /* Form Styling */
-.form  {
+.form {
     background: var(--bg-img);
     width: 80%;
     margin: 3% auto;
@@ -125,14 +136,14 @@ img.logo {
 
 .card img {
     border-radius: 8px;
-    height: 16rem; 
-    width: 18rem; 
- 
+    height: 16rem;
+    width: 18rem;
+
 }
 
 .card h2 {
     font-size: 20px;
-    
+
 }
 
 .post {
@@ -145,13 +156,13 @@ img.logo {
 }
 
 .post-info {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     box-shadow: var(--small-box-shadow);
     border-radius: 8px;
     border: 1px solid var(--grey-green);
-   
+
 }
 
 .post-container {
@@ -163,11 +174,11 @@ img.logo {
 
 .post-detail {
     width: 100%;
-    
+
 }
 
 .post-detail a {
-   text-decoration: none;
+    text-decoration: none;
 }
 
 .post-img {
@@ -175,8 +186,9 @@ img.logo {
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-   
+
 }
+
 
 .post-pic {
     width: 100%;
@@ -185,6 +197,7 @@ img.logo {
 }
 
 
+/* Profile styling */
 
 .profile-img img {
     border-radius: 8px;
@@ -192,21 +205,21 @@ img.logo {
 }
 
 .card-container {
-  
+
     padding-bottom: 3rem;
 }
 
 .profile-card {
-    margin-top:  2rem;
-   
+    margin-top: 2rem;
+
 }
 
 
 .latest-bg {
-    background-color:var(--soft-green);
+    background-color: var(--soft-green);
     margin-top: 4rem;
     margin-bottom: 4rem;
-   
+
 }
 
 .about-bg {
@@ -222,32 +235,16 @@ img.logo {
 }
 
 .about-card img {
-   border-radius: 8px;
+    border-radius: 8px;
     width: 20rem;
     margin-left: 5rem;
-    
+
 }
 
+/* Media screens */
 
+@media screen and (min-width:40em) {
 
-/* .profile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.info {
-    width: 100%;
-    text-align: center;
-}
-
-.profile-post, 
-.liked-posts {
-    width: 100%;
-} */
-
-@media screen and (min-width:40em){
-   
     .form {
         width: 50%;
     }
@@ -261,15 +258,16 @@ img.logo {
 @media screen and (min-width: 62.5em) {
     .card h2 {
         font-size: 25px;
-        
+
     }
 
     .post-info {
         flex-direction: row;
         border: 1px solid var(--grey-green);
-       
-       
+
+
     }
+
     .post-img {
         width: 40%;
         margin: 0 auto;
@@ -298,11 +296,9 @@ img.logo {
         text-decoration: none;
     }
 
-    .navbar-brand{
+    .navbar-brand {
         --bs-navbar-brand-margin-end: 45.5rem;
         margin-left: 1rem;
     }
-    
-}
 
-    
+}
