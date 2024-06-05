@@ -16,9 +16,10 @@ Here users can write and share their stories and experiences. And as new parents
     - [Site Owner Goals](#site-owner-goals)
     - [User Goals](#user-goals)
 - [Agile Planning](#agile-planning)
-    -[Epic](#epic)
-    -[Implemented User Stories](#implemented-user-stories)
-    -[Not implemented User Stories](#not-implemented-user-stories)
+    - [Epic](#epic)
+    - [User Stories](#user-stories)
+        - [Implemented User Stories](#implemented-user-stories)
+        - [Not implemented User Stories](#not-implemented-user-stories)
     - [Flowchart](#flowchart)
     - [Entity Relational Diagram](#entity-relational-diagram)
 - [Design](#design)
@@ -33,6 +34,7 @@ Here users can write and share their stories and experiences. And as new parents
         - [Loged in Detailview](#loged-in-detailview)
         - [Leave a Comment](#leave-a-comment)
         - [The likes](#the-likes)
+    - [Profile Page](#profile-page)
     - [Create Post](#create-post)
         - [Draft or Published](#draft-or-published)
     - [Edit Post](#edit-post)
@@ -51,8 +53,8 @@ Here users can write and share their stories and experiences. And as new parents
 - [Technologies](#technologies)
 - [Deployment](#deployment)
 - [Testing](#testing)
-    -[Validation](#validation)
-    -[Lighthouse Report](#lighthouse-report)
+    - [Validation](#validation)
+    - [Lighthouse Report](#lighthouse-report)
     - [Responsiveness](responsiveness)
     - [User Stories Testing](#user-stories-testing)
     - [Automated Testing](#automated-testing)
@@ -104,9 +106,12 @@ The target audience includes parents, siblings, grandparents, aunts, uncles, cou
 - Have a visually appealing and responsive user interface.
 
 ## Agile Planning
-To implement agile planning, I wrote four different epics and divided each epic into user stories. Each user story has acceptance criteria and tasks.  I also created three different labels, *Must have*, *Should have* and *Could have*. In this way I categorized my user stories so I had a clear picture which user stories I needed to prioritize first. This was the basis for the development of the projects features
+
+To implement agile planning, I wrote four different epics and divided each epic into user stories. Each user story has acceptance criteria and tasks. I also created three different labels, *Must have*, *Should have* and *Could have*. In this way I categorized my user stories so I had a clear picture which user stories I needed to prioritize first. This was the basis for the development of the projects features. To see the project's Kanban page please click [here](https://github.com/users/Linnea87/projects/10)
 
 ### EPIC
+
+Since all User Stories have different labels, the number of purple ticks in each EPIC will vary.
 
 ![epic_1](documentation/images/epic_1.png)
 
@@ -116,7 +121,11 @@ To implement agile planning, I wrote four different epics and divided each epic 
 
 ![epic_4](documentation/images/epic_4.png)
 
-### Implemented User Stories
+### User Stories
+
+All user stories that have the label *must have* are implemented, then there are some with the label *should have*. Of those that are not implemented, some have the *should have* label and some have the *could have* label.
+
+#### Implemented User Stories
 
 - **#1** As a Site owner I can access the admin panel, so I can see and update all of the informations, accept comments and remove inappropriate or spammy blog posts and comments, delete users.
 - **#2** As a Site User I can see a list of blog posts, so I can choose which post I want to read more about.
@@ -131,23 +140,29 @@ To implement agile planning, I wrote four different epics and divided each epic 
 - **#11** As a User I can leave comments on a post, so I can ask questions, provide feedback, or share my thoughts.
 - **#12** As a User I can like blog posts that I find interesting.
 - **#16** As a User I can edit my profile, so I can keep the information upto date
-- **#17** As a User I can reset my password, so I can access my account even if I have forgotten my password
-
-### Not implemented User Stories
-
-- **#13** As a User I can view my profile, so I can see the Blog post I've submitted.
-- **#14** As a User I can delete my profile, so it will be removed from the database
-- **#15** As a User I can visit other people's profiles, so I can read their bios
 - **#18** As a User I can edit and delete my comments, so I can manage my comments on the blog.
 - **#19** As a User I can use the contact form, so I can contact the admin of the blog
-- **#20**  As a Site user I can access a page with a medical information, so I can read and gain a more in-depth understanding of what the syndrome entails.
 - **#21** As a Developer I need to implement different error pages, so I can alert users when something goes wrong
+- **#13** As a User I can view my profile, so I can see the Blog post I've submitted.
+
+*User story #20 below is reminiscent of an acceptance criteria under about page and is therefore partially implemented as I decided to put medical links under about page instead of having a completely separate page for this. Instead of deleting this story, I chose to report it this way.*
+
+- **#20**  As a Site user I can access a page with a medical information, so I can read and gain a more in-depth 
+
+
+#### Not implemented User Stories
+
+- **#14** As a User I can delete my profile, so it will be removed from the database
+- **#15** As a User I can visit other people's profiles, so I can read their bios
+- **#17** As a User I can reset my password, so I can access my account even if I have forgotten my password
+understanding of what the syndrome entails.
 - **#22** As a User I can be notified when someone comments on one of my blog posts, so I can respond if necessary
 - **#23** As a User I can receive push notifications for new comments on the same blog posts I have commented on., so I can be updated in the conversion
 - **#28** As a User I can see all the blog post i have liked on my profile, so I can easily go back and read them again
 
 
 ### Flowchart
+
 I drew a flowchart using [Figma](https://www.figma.com/) and my ipad,
 
 ![flowchart](documentation/images/flowchart.png)
@@ -155,10 +170,8 @@ I drew a flowchart using [Figma](https://www.figma.com/) and my ipad,
 ### Entity Relational Diagram
 
 As part of designing my website, I planned and drew my models on my Ipad using [Figma](https://www.figma.com/).
-The planned models may differ from the result, and some planned models may not be implanted in the final result
 
 ![erd-diagram](documentation/entity_relational_diagram/erd-diagram.png)
-
 
 ## Design
 
@@ -217,139 +230,169 @@ I used the [Color](https://coolors.co) tool 'image picker' where I used the head
 
 ### Header
 
-*This is what the header looks like when you are not logged in. The logo is a simple design that I made myself.  The page that is active is marked with a solid line.*
+This is what the header looks like when you are not logged in. The logo is a simple design that I made myself.  The page that is active is marked with a solid line.
 
 ![header not signed in](documentation/images/header-not-signed-in.png)
 
-*When the user are logged in, the header changes and instead of register and login the user now see their own username.*
-*And in the dropdown menu the user can go to their profile, create a blog post or log out*
+When the user are logged in, the header changes and instead of register and login the user now see their own username.
+And in the dropdown menu the user can go to their profile, create a blog post or log out
 
 ![signed in header](documentation/images/header-signed-in.png)
 
 ### Landing Page
 
-*This is the landing page, beautiful and inviting in its simplicity.*
+This is the landing page, beautiful and inviting in its simplicity.
 
 ![home page](documentation/images/home_page.png)
 
 
 ### Blog page
 
-*This page shows all the blog posts available. Here, the user also sees how many people have liked and commented on the posts*
+This page shows all the blog posts available. Here, the user also sees how many people have liked and commented on the posts
 
-![Blog page](documentation/images/blogpage.png)
+![blog page](documentation/images/blogpage.png)
 
 ### Detailview
 
-*Users can click on a post to read a more detailed text. here too the users can see how many people have liked the post and who has left a comment. To like or leave a comment, the users needs to be logged in or create an account.*
+Users can click on a post to read a more detailed text. here too the users can see how many people have liked the post and who has left a comment. To like or leave a comment, the users needs to be logged in or create an account.
 
-![Detailview-not-signed-in-1](documentation/images/detailview-not-signed-in-1.png)
+![detailview-not-signed-in-1](documentation/images/detailview-not-signed-in-1.png)
 
-![Detailview-not-signed-in-2](documentation/images/detailview-not-signed-in-2.png)
+![detailview-not-signed-in-2](documentation/images/detailview-not-signed-in-2.png)
 
 #### Loged in Detailview
 
 If the users are logged in and clicks on their own blog post, the user can edit or delete their own post. And they can leave a comment
 
-![Detailview-signed-in-1](documentation/images/detailview-signed-in-1.png)
+![detailview-signed-in-1](documentation/images/detailview-signed-in-1.png)
 
-![Detailview-signed-in-2](documentation/images/detailview-signed-in-2.png)
+![detailview-signed-in-2](documentation/images/detailview-signed-in-2.png)
 
 #### Leave a Comment
 
-*When the users press the button, They will be taken to a form where they can leave their comment*
+When the users press the button, They will be taken to a form where they can leave their comment
 
 ![comment-form](documentation/images/comment-form.png)
 
-*After pressing the Submit button, users are returned to the blog page and receive a notification that their comment has been submitted.*
+After pressing the Submit button, users are returned to the blog page and receive a notification that their comment has been submitted.
 
 ![comment-message](documentation/images/comment-message.png)
 
-*When the user returns to the post, they can now see their own comment*
+When the user returns to the post, they can now see their own comment
 
 ![new-comment](documentation/images/new-comment.png)
 
+Users can edit and delete their own comments.
+
+![edit-delete-comment](documentation/images/comment-edit-delete.png)
+
+When users choose to edit their comments, they are taken to a form. when they click update, they get a success message
+
+![edit-comment](documentation/images/edit-comment.png)
+
+![edit-success](documentation/images/comment-updated.png)
+
+When users choose to delete, they have two choices, either click the back button and be directed back to the post, or confirm and receive a successful message that the comment has been deleted
+
+![delete-comment](documentation/images/comment-delete-view.png)
+
+![delete-success](documentation/images/comment-delete-success.png)
+
 #### The likes
 
-*The user can also see if they have liked or disliked the post. If they liked the post, the heart is black, and if they click again, they take their like back and the heart turns white. The numbers next to the heart increase if the user likes the post and decrease if they return their like*
+The user can also see if they have liked or disliked the post. If they liked the post, the heart is black, and if they click again, they take their like back and the heart turns white. The numbers next to the heart increase if the user likes the post and decrease if they return their like
 
 ![signed-in-liked](documentation/images/signed-in-liked.png)
 
 ![signedin-not-liked](documentation/images/signedin-not-liked.png)
 
+### Profile Page
+
+When the user goes to their profile, all posts, both published and drafts that the user has created, are displayed. The user's bio and selected profile picture are also displayed here. The users can also see their name, when they created the account and how many posts they have written.
+
+![profile](documentation/images/profile-page.png)
+
+They can also update their profile.
+
+![edit profile](documentation/images/edit-profile.png)
+
+When they click on update, they receive a successful message that their profile has been updated
+
+![profile updated](documentation/images/profile-updated.png)
+
 ### Create Post
 
-*When users click on create post in the dropdown menu, they come to the create post form.T he user can choose to save the post as a draft or publish the post right away*
+When users click on create post in the dropdown menu, they come to the create post form.T he user can choose to save the post as a draft or publish the post right away
 
-![Create Post Form](documentation/images/createform_1.png)
+![create post form](documentation/images/createform_1.png)
 
-![Draft](documentation/images/status-draft.png)
+![draft](documentation/images/status-draft.png)
 
-![Published](documentation/images/status-published.png)
+![published](documentation/images/status-published.png)
 
-*If the user does not fill in all the fields in the form when they click the create post button, the user will be directed to the missing field and a blue frame will mark the missing field*
+If the user does not fill in all the fields in the form when they click the create post button, the user will be directed to the missing field and a blue frame will mark the missing field
 
-![Missed field](documentation/images/createform-not-filled.png)
+![missed field](documentation/images/createform-not-filled.png)
 
 #### Draft or Published
 
 The user can choose to save their post as a draft or publish the post directly.
 
-*if the user chooses to save the post as a draft, a success message is displayed and the post is displayed only on the user's profile page*
+If the user chooses to save the post as a draft, a success message is displayed and the post is displayed only on the user's profile page.
 
 ![draft](documentation/images/draft.png)
 
 ![draft](documentation/images/draft-profile.png)
 
-*If the user chooses to publish the post immediately, a success message will appear and the post will appear on both the blog page with all other published posts and on the user's profile page.*
+If the user chooses to publish the post immediately, a success message will appear and the post will appear on both the blog page with all other published posts and on the user's profile page.
 
-![Published](documentation/images/published-success.png)
+![published](documentation/images/published-success.png)
 
-![Published](documentation/images/published-blog-page.png)
+![published](documentation/images/published-blog-page.png)
 
-![Published](documentation/images/published-profile.png)
+![published](documentation/images/published-profile.png)
 
 ### Edit Post
 
-*When the user chooses to edit their post, they are brought to the same form as when they created the post but this time it is already filled with the previous content and it is only for the user to add or remove content.*
+When the user chooses to edit their post, they are brought to the same form as when they created the post but this time it is already filled with the previous content and it is only for the user to add or remove content.
 
-![Edit Post](documentation/images/edit-post.png)
+![edit post](documentation/images/edit-post.png)
 
-![Edit Post](documentation/images/edit-post-2.png)
+![edit post](documentation/images/edit-post-2.png)
 
-*When the user is satisfied and clicks on edit post, they are redirected to the blog page where they receive a successful message and can see that their update was successful when the new update is displayed. They can also see that the update was successful on their profile.*
+When the user is satisfied and clicks on edit post, they are redirected to the blog page where they receive a successful message and can see that their update was successful when the new update is displayed. They can also see that the update was successful on their profile.
 
-![Edit successful](documentation/images/post-updated.png)
+![edit successful](documentation/images/post-updated.png)
 
-![Edit successful](documentation/images/updated-post.png)
+![edit successful](documentation/images/updated-post.png)
 
-![Edit successful](documentation/images/updated-profile.png)
+![edit successful](documentation/images/updated-profile.png)
 
-*if a user who is not authorized tries to access another user's blog post and edits, this error page is displayed*
+If a user who is not authorized tries to access another user's blog post and edits, this error page is displayed
 
-![Edit error](documentation/images/edit-someone-else-blog-post.png)
+![edit error](documentation/images/edit-someone-else-blog-post.png)
 
 ### Delete Post
 
-*When the user clicks delete, they come to a page where they can either confirm or go back*
+When the user clicks delete, they come to a page where they can either confirm or go back
 
 ![delete](documentation/images/delete-post.png)
 
-*If the user clicks on the back button, they are directed back to the detailview.*
+If the user clicks on the back button, they are directed back to the detailview.
 
-![Delete-back](documentation/images/cancel-delete.png)
+![delete-back](documentation/images/cancel-delete.png)
 
-*If, however, the user clicks on confirm, they are directed to the blog page where they receive a success message and see that it was successful, as the post that was deleted is no longer among the most recent blog posts. The deleted post also disappears from the user's profile as further confirmation that it has been removed.*
+If, however, the user clicks on confirm, they are directed to the blog page where they receive a success message and see that it was successful, as the post that was deleted is no longer among the most recent blog posts. The deleted post also disappears from the user's profile as further confirmation that it has been removed.
 
-![Delete-success](documentation/images/post-deleted.png)
+![delete-success](documentation/images/post-deleted.png)
 
-![Delete-success](documentation/images/delete-success.png)
+![delete-success](documentation/images/delete-success.png)
 
-![Delete-success](documentation/images/delete-success-profile.png)
+![delete-success](documentation/images/delete-success-profile.png)
 
 ### Logout
 
-*When the user clicks on log out in the dropdown menu, they will be taken to a page where they can choose to either log out or cancel.*
+When the user clicks on log out in the dropdown menu, they will be taken to a page where they can choose to either log out or cancel.
 
 ![logout](documentation/images/logout-page.png)
 
@@ -363,70 +406,70 @@ The user can choose to save their post as a draft or publish the post directly.
 
 ### About Page
 
-*Here the users can read about why the blog was created and its purpose. Here is also a link if the users want to read  more in-depth facts about Charge syndrome. When the user clicks on the link, that page opens in a new window.*
+Here the users can read about why the blog was created and its purpose. Here is also a link if the users want to read  more in-depth facts about Charge syndrome. When the user clicks on the link, that page opens in a new window.
 
-![About1](documentation/images/about1.png)
+![about1](documentation/images/about1.png)
 
-![About2](documentation/images/about2.png)
+![about2](documentation/images/about2.png)
 
 
 ### Contact Page
 
-*Here, users can get in touch with the web owner*
+Here, users can get in touch with the web owner
 
 ![contact](documentation/images/contact.png)
 
-*Once the user has filled out the contact form and clicked the send button, they will receive a thank you message letting them know their message was sent successfully.*
+Once the user has filled out the contact form and clicked the send button, they will receive a thank you message letting them know their message was sent successfully.
 
 ![contact-success](documentation/images/contact-success.png)
 
 
 ### Sign Up
 
-*Here users can register if they want to become part of the community. If they are already part of this community, they will be directed to the sign in form and*
+Here users can register if they want to become part of the community. If they are already part of this community, they will be directed to the sign in form and
 
 ![sign up](documentation/images/signup.png)
 
-*When the user is about to register and enters either a shortened password, only numbers, a password that is too common or that the passwords do not match, this is shown on the screen with an explanation in red text. This applies even if the user were to fill in a username that already exists*
+When the user is about to register and enters either a shortened password, only numbers, a password that is too common or that the passwords do not match, this is shown on the screen with an explanation in red text. This applies even if the user were to fill in a username that already exists
 
-![Error sign up](documentation/images/password-to-short.png)
+![error sign up](documentation/images/password-to-short.png)
 
-![Error sign up](documentation/images/commen-numeric-password.png)
+![error sign up](documentation/images/commen-numeric-password.png)
 
-![Error sign up](documentation/images/not-same-password.png)
+![error sign up](documentation/images/not-same-password.png)
 
-![Error sign up](documentation/images/existing-username.png)
+![error sign up](documentation/images/existing-username.png)
 
-*When the user has filled in the registration form correctly, they are redirected to the landing page with a successful message*
+When the user has filled in the registration form correctly, they are redirected to the landing page with a successful message
 
-![Success sign up](documentation/images/signed-up-success.png)
+![success sign up](documentation/images/signed-up-success.png)
 
 ### Sign In
 
-*Here the users log in, if they are not already part of the community they are directed to the sign up form.*
+Here the users log in, if they are not already part of the community they are directed to the sign up form.
 
 ![sign in](documentation/images/signin.png)
 
-*When the user logs in, they come to the landing page and here a message is displayed that the user is logged in with their username*
+When the user logs in, they come to the landing page and here a message is displayed that the user is logged in with their username
 
 ![signed in](documentation/images/signed-in-message.png)
 
-*When the user fills in the password or username, this red text is displayed.*
+When the user fills in the password or username, this red text is displayed.
 
 ![wrong password or username](documentation/images/wrong-password.png)
 
 ### Various ERRORS
 
 
-*If a user tries to do something they are not authorized to do, a 403 error is displayed.*
+If a user tries to do something they are not authorized to do, a 403 error is displayed.
 
 ![403 error](documentation/images/edit-someone-else-blog-post.png)
 
-*When the user tries to reach a page that does not exist, a 404 error is displayed.*
+When the user tries to reach a page that does not exist, a 404 error is displayed.
 
 ![404-error](documentation/images/error-404.png)
 
-*if there is some internal error with the page, 500 error is displayed with a message.*
+If there is some internal error with the page, 500 error is displayed with a message.
 
 ![500-error](documentation/images/500-error.png)
 
@@ -434,6 +477,7 @@ The user can choose to save their post as a draft or publish the post directly.
 ## Future Features
 
 ## Security
+
 ### Cross-Site Request Forgery (CSRF) Protection
 
 - Implementing CSRF protection helps prevent malicious websites from executing unauthorized actions on behalf of authenticated users.
@@ -449,9 +493,9 @@ The user can choose to save their post as a draft or publish the post directly.
 - Certain features, such as creating, editing, or deleting blog posts and profiles, are reserved for authenticated users only.
 - By requiring users to be logged in to access these features, the application enhances security and ensures that sensitive operations are performed by authorized individuals only.
 
-#### Typography
 
 ## Languages/Technolgies
+
 This Project is built using various technologies.
 
 - **Django 5.0.6:** A Python web framework for building web applications.
@@ -497,9 +541,11 @@ you need to install the dependencies using the *pip install -r requirements.txt*
 ### Lighthouse Report
 ### Automated Testing
 ### Responsiveness
+
 ### User Stories Testing
 
-Here I have viewed the user stories in my GitHub project, and carefully gone through my acceptance criteria for each user story.
+Here I have viewed the user stories in my GitHub project, and carefully gone through my acceptance criteria for each user story that has been implemented.
+
 If the criteria is met, it is marked in these tables below. 
 
 Finally the issue for each user story in my project has been closed if the acceptance criteria was met.
