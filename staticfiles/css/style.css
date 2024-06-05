@@ -192,9 +192,9 @@ img.logo {
     width: 100%;
 }
 
-.latest-card-container {
-    width: 20rem;
-    margin-left: 2rem;
+.card-container {
+  
+    margin-left: 4rem;
     padding-bottom: 3rem;
 }
 
@@ -203,11 +203,6 @@ img.logo {
    
 }
 
-/* .post-cont {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-} */
 
 .latest-bg {
     background-color:var(--soft-green);
@@ -285,9 +280,7 @@ img.logo {
         flex-direction: row;
     }
 
-
-    .profile-post, 
-    .liked-posts {
+    .profile-post {
         width: 70%;
         padding: 1.5rem 3rem;
     }
