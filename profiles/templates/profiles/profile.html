@@ -41,7 +41,7 @@
 
 <div class="latest-bg">
     <h2 class="text-center pb-4">Latest Post</h2>
-    <div class="latest-card-container d-flex flex-row flex-wrap justify-content-center">
+    <div class="card-container d-flex flex-row flex-wrap justify-content-center row row-cols-1 row-cols-md-3 g-2">
         {% for post in profile.user.post_owner.all %}
         <a href="{% url 'post_detail' post.id %}" class="post" aria-label="Click to view {{post.title}}">
             <div class="card mb-3">
