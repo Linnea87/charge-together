@@ -193,7 +193,7 @@ img.logo {
 }
 
 .card-container {
-   
+  
     margin-left: 4rem;
     padding-bottom: 3rem;
 }
@@ -280,9 +280,7 @@ img.logo {
         flex-direction: row;
     }
 
-
-    .profile-post, 
-    .liked-posts {
+    .profile-post {
         width: 70%;
         padding: 1.5rem 3rem;
     }
