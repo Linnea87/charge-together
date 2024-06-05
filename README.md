@@ -107,7 +107,7 @@ The target audience includes parents, siblings, grandparents, aunts, uncles, cou
 
 ## Agile Planning
 
-To implement agile planning, I wrote four different epics and divided each epic into user stories. Each user story has acceptance criteria and tasks. I also created three different labels, *Must have*, *Should have* and *Could have*. In this way I categorized my user stories so I had a clear picture which user stories I needed to prioritize first. This was the basis for the development of the projects features. To see the project's Kanban page please click [here](https://github.com/users/Linnea87/projects/10)
+To implement agile planning, I wrote four different epics and divided each epic into user stories. Each user story has acceptance criteria and tasks. I also created three different labels, *Must have*, *Should have* and *Could have*. In this way I categorized my user stories so I had a clear picture which user stories I needed to prioritize first. This was the basis for the development of the projects features. 
 
 ### EPIC
 
@@ -544,17 +544,22 @@ you need to install the dependencies using the *pip install -r requirements.txt*
 
 ### User Stories Testing
 
-Here I have viewed the user stories in my GitHub project, and carefully gone through my acceptance criteria for each user story that has been implemented.
+Here I have tested all my four EPICs and their associated User stories that have been implemented. I have carefully reviewed each User story's acceptance criteria and made sure they are met. Every user story that is implemented and that has met the criteria is listed as done in the project's Kanban board
+To see the Kanban board please click [here](https://github.com/users/Linnea87/projects/10)
 
-If the criteria is met, it is marked in these tables below. 
-
-Finally the issue for each user story in my project has been closed if the acceptance criteria was met.
-
-- **EPIC 1 - A non-registered or registered user**.
+- **EPIC#1 - A non-registered or registered user**.
 
 ![epic1](documentation/images/epic1-test.png)
 
-- **EPIC 4 - The blogs Admin and Developer**
+- **EPIC#2 - Manage blog posts**
+
+![epic2](documentation/images/epic2-testing.png)
+
+- **EPIC#3 -  Manage the profile**
+
+![epic3](documentation/images/epic3-testing.png)
+
+- **EPIC#4 - The blogs Admin and Developer**
 
 ![epic4](documentation/images/epic4-test.png)
 
