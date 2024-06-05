@@ -1,6 +1,6 @@
 from django.views.generic import TemplateView, UpdateView
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
-
+from django.contrib import messages
 from .models import Profile
 from .forms import ProfileForm
 
@@ -30,6 +30,7 @@ class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def form_valid(self, form):
         self.success_url = f'/profiles/user/{self.kwargs["pk"]}/'
+        messages.success(self.request, 'Your profile are updated')
         return super().form_valid(form)
 
     def test_func(self):
