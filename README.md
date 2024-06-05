@@ -221,12 +221,14 @@ I used the [Color](https://coolors.co) tool 'image picker' where I used the head
 
 ### Fonts
 
-- I chose to have Gb Garamond for the main headings as it is beautiful in its simplicity and readable, I chose serif as the fallback font.
-- For the paragraphs I chose to have Roboto as it is also beautiful in its simplicity and readable, and here again I chose serif as the fallback font
+- I chose to have EB Garamond for the main headings as it is beautiful in its simplicity and readable, I chose serif as the fallback font.
+- For the paragraphs I chose to have Roboto as it is also beautiful in its simplicity and readable, and here again I chose serif as the fallback font.
 
 ## Screenshots of Features 
 
 **Below you can see screenshots of how the blog looks, both as a non-logged-in user and as a logged-in user.**
+
+(<small>the font in my screenshots does not match the finished project and the font choice I discuss above, this is because I noticed a typo in my css and the font I changed to was not saved properly. But at the time of writing it is the correct font in the finished project</small>)
 
 ### Header
 
