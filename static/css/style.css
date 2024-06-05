@@ -13,6 +13,7 @@
     --soft-green:#6a8c8f30;
     --grey-green:#24494c71;
     
+
     /* Utils */
     --small-box-shadow: 1px 4px 7px 0 #00000061;
     --border: 1px solid #00000030;
@@ -58,8 +59,6 @@ main {
     padding: 1rem 1rem 1rem;
     height: 90%;
     
-    
-
 }
 /* Footer */
 
@@ -82,12 +81,15 @@ footer {
 
 .navbar {
     background: var(--white);
+    
 }
 
 a.nav-link {
     color: var(--black);
    
+    
 }
+
 
 .active{
     border-bottom: 1px solid var(--grey-green);
@@ -96,11 +98,8 @@ a.nav-link {
 
 img.logo {
     width:18.75rem; 
-    padding-top: 1rem;
     
 }
-
-
 
 
 
@@ -194,7 +193,6 @@ img.logo {
 
 .card-container {
   
-    margin-left: 4rem;
     padding-bottom: 3rem;
 }
 
@@ -248,6 +246,17 @@ img.logo {
     width: 100%;
 } */
 
+@media screen and (min-width:40em){
+   
+    .form {
+        width: 50%;
+    }
+
+    .img-container {
+        flex-direction: row;
+        width: 29%;
+    }
+}
 
 @media screen and (min-width: 62.5em) {
     .card h2 {
@@ -288,6 +297,12 @@ img.logo {
     .profile-post a {
         text-decoration: none;
     }
+
+    .navbar-brand{
+        --bs-navbar-brand-margin-end: 45.5rem;
+        margin-left: 1rem;
+    }
+    
 }
 
     
