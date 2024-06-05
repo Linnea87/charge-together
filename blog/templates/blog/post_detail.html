@@ -71,6 +71,7 @@
                 </p>
                 {% if request.user == comment.user %}
                 <a href="{% url 'edit_comment' comment.id %}"><small>Edit</small></a>
+                <a href="{% url 'delete_comment' comment.id %}"><small>Delete</small></a>
                 {% endif %}
             </div>
             
