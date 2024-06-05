@@ -115,8 +115,7 @@ class DeletePost(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
    
     def test_func(self):
         return self.request.user == self.get_object().author
-    
-    
+     
 
 class NewComment(LoginRequiredMixin, CreateView):
     """
@@ -129,28 +128,26 @@ class NewComment(LoginRequiredMixin, CreateView):
     
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
-        form.instance.user= self.request.user
+        form.instance.user = self.request.user
         messages.success(self.request, 'Thank you for your comment!')
         return super().form_valid(form)
     
-    
-    
-# class EditComment(LoginRequiredMixin, UpdateView):
-#     """
-#     The User can edit their own existing comments
-#     """
-    
-#     model = Comment
-#     success_url = "/blog/"
-#     form_class = CommentForm
-#     template_name = "blog/edit_comment.html"
 
+class EditComment(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    """Edit own comment"""
 
-#     def form_valid(self, form):
-#         form.instance.post_id = self.kwargs['pk']
-#         form.instance.user= self.request.user
-#         messages.success(self.request, 'Your comment was sent successfully.')
-#         return super().form_valid(form)
+    template_name = "blog/edit_comment.html"
+    model = Comment
+    success_url = "/blog/"
+    form_class = CommentForm
+   
+    def form_valid(self, form):
+        messages.success(self.request, 'Your comment are updated')
+        return super().form_valid(form)
+
+    def test_func(self):
+        return self.request.user == self.get_object().user 
+    
 
 
     
@@ -158,4 +155,3 @@ class NewComment(LoginRequiredMixin, CreateView):
 
 
 
-#     

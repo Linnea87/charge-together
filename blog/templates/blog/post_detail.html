@@ -69,13 +69,17 @@
                     <br>
                     {{ comment.body|safe }}
                 </p>
+                {% if request.user == comment.user %}
+                <a href="{% url 'edit_comment' comment.id %}"><small>Edit</small></a>
+                {% endif %}
             </div>
+            
             {% empty %}
             <p>No comments here yet!</p>  
         </div>  
         {% endfor %} 
     </div>
-   
+    
 {% endblock content %}
 
 
