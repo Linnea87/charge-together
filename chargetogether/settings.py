@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-
 if os.path.isfile("env.py"):
     import env
 
@@ -58,7 +57,6 @@ INSTALLED_APPS = [
     "cloudinary",
     "cloudinary_storage",
     "djrichtextfield",
-    "django_summernote",
     "autoslug",
 ]
 
@@ -78,6 +76,8 @@ DJRICHTEXTFIELD_CONFIG = {
     },
 }
 
+
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
@@ -92,6 +92,7 @@ MIDDLEWARE = [
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
 
 ROOT_URLCONF = "chargetogether.urls"
 
@@ -187,6 +188,8 @@ LOGIN_REDIRECT_URL = "/"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
+
+
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [

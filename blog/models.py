@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from djrichtextfield.models import RichTextField
 from django_resized import ResizedImageField
 from autoslug import AutoSlugField
 
@@ -27,7 +28,7 @@ class Post(models.Model):
     )
     image_alt = models.CharField(max_length=100, null=False, blank=False)
     excerpt = models.TextField()
-    content = models.TextField()
+    content = RichTextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     updated_on = models.DateTimeField(auto_now=True)

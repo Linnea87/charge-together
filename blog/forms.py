@@ -1,5 +1,5 @@
 from django import forms
-from django_summernote.widgets import SummernoteWidget
+from djrichtextfield.widgets import RichTextWidget
 from .models import Post, Comment
 
 
@@ -19,9 +19,11 @@ class PostForm(forms.ModelForm):
             "status",
         ]
 
+        
+        content = forms.CharField(widget=RichTextWidget())
+
         widgets = {
-            "excerpt": forms.Textarea(attrs={"rows": 5}),
-            "content": SummernoteWidget(),
+           "excerpt": forms.TextInput(attrs={'class': 'form-control'}), 
         }
 
         labels = {

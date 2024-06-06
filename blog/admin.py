@@ -1,10 +1,9 @@
 from django.contrib import admin
-from django_summernote.admin import SummernoteModelAdmin
 from .models import Post, Comment
 
 
 @admin.register(Post)
-class PostAdmin(SummernoteModelAdmin):
+class PostAdmin(admin.ModelAdmin):
     list_display = (
         "title",
         "slug",
@@ -12,18 +11,14 @@ class PostAdmin(SummernoteModelAdmin):
         "created_on",
         "image",
     )
+
     search_fields = ["title", "content"]
     list_filter = (
         "status",
         "created_on",
     )
-    summernote_fields = ("content")
 
-    fieldsets = (
-        (None, {
-            'fields': ('title', 'author', 'image', 'excerpt', 'content', 'status', 'likes'),
-        }),
-    )
+
 
 
 @admin.register(Comment)
