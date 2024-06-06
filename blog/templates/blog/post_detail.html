@@ -13,7 +13,7 @@
                 <p class="text-center"><small>Written by {{post.author}} on {{post.created_on}}</small><br>
                     {% if request.user == post.author %}
                         <a href="{% url 'edit_post' post.id %}"><small>Edit</small></a>
-                        <a href="{% url 'delete_post' post.id %}"><small>Delete</a></small>
+                        <a href="{% url 'delete_post' post.id %}"><small>Delete</small></a>
                     {% endif %}
                 </p>
                 <hr>
@@ -22,10 +22,10 @@
         </div>        
           <div class="post-container m-4">
             <div class="content p-5">
-                <p>{{post.content|safe}}</p>
+                {{post.content|safe}}
             </div>
         </div>
-        <hr style="width:100%;">
+        <hr>
         <div class="row">
             <div class="col-1">
                 {% if user.is_authenticated %}
@@ -33,24 +33,22 @@
                     {% csrf_token %}
                     {% if post_is_liked %}
                     <button type="submit" name="post_id" value="{{post.id}}" class="btn-like">
-                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i> <span class="text-secondary">{{ post.number_of_likes }}</span>
                     </button>
                     {% else %}
                     <button type="submit" name="post_id" value="{{post.id}}" class="btn-like">
-                        <i class="far fa-heart"></i>
+                        <i class="far fa-heart"></i> <span class="text-secondary">{{ post.number_of_likes }}</span>
                     </button>
-                    {% endif %}
-                    <span class="text-secondary">{{ post.number_of_likes }}</span>
+                    {% endif %}  
                 </form>
                 {% else %}
-                <span class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }}</span> 
+                <i class="far fa-heart"></i> <span class="text-secondary">{{post.number_of_likes}}</span> 
                 {% endif %} 
             </div>  
             <div class="col-1">
-                <span class="text-secondary"><i class="far fa-comments"></i> {{post.comments.count }}</span>  
+               <i class="far fa-comments"></i> <span class="text-secondary"> {{post.comments.count}}</span>  
             </div>
-        </div> 
-   
+        </div>
         <br>
         <div>
             <h1>Comments:</h1>
@@ -79,8 +77,7 @@
             <p>No comments here yet!</p>  
         </div>  
         {% endfor %} 
-    </div>
-    
+    </div> 
 {% endblock content %}
 
 
