@@ -8,8 +8,9 @@ class ContactAdmin(admin.ModelAdmin):
     """
     Register info from contact form in admin panel
     """
+
     list_display = (
-        'name',
-        'email',
-        'read',
+        "name",
+        "email",
+        "read",
     )

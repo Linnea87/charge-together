@@ -43,8 +43,10 @@ class Post(models.Model):
     def number_of_likes(self):
         return self.likes.count()
 
+
 class PostLike(models.Model):
-    """ Model representing a like for a specific post by a user. Code used from the Code Institute's I think, Therefore I blog. """
+    """Model representing a like for a specific post by a user. Code used from the Code Institute's I think, Therefore I blog."""
+
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
@@ -56,9 +58,9 @@ class Comment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        """ Meta class for the Comment model. """
+        """Meta class for the Comment model."""
+
         ordering = ["created_on"]
 
     def __str__(self):
         return f"Comment {self.body} by {self.user}"
-

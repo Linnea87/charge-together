@@ -19,11 +19,10 @@ class PostForm(forms.ModelForm):
             "status",
         ]
 
-        
         content = forms.CharField(widget=RichTextWidget())
 
         widgets = {
-           "excerpt": forms.TextInput(attrs={'class': 'form-control'}), 
+            "excerpt": forms.TextInput(attrs={"class": "form-control"}),
         }
 
         labels = {
@@ -35,9 +34,8 @@ class PostForm(forms.ModelForm):
             "status": "Status",
         }
 
+
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ['body']
-
-    
+        fields = ["body"]

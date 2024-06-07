@@ -22,4 +22,4 @@ class PostAdmin(admin.ModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ( 'body', 'post', 'created_on')
+    list_display = ("body", "post", "created_on")

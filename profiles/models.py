@@ -9,7 +9,6 @@ from django.dispatch import receiver
 from django_resized import ResizedImageField
 
 
-
 class Profile(models.Model):
     """
     Model for the Profile
@@ -25,7 +24,7 @@ class Profile(models.Model):
     )
     bio = RichTextField(max_length=2500, null=True, blank=True)
     liked_posts = models.ManyToManyField(Post, related_name="liked_posts", blank=True)
-    
+
     def __str__(self):
         return str(self.user.username)
 
@@ -37,4 +36,3 @@ def create_user_profile(instance, created, **kwargs):
     """
     if created:
         Profile.objects.create(user=instance)
-
