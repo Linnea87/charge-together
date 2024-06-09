@@ -4,10 +4,10 @@
 {% block title %}Contact{% endblock title %}
 {% block content %}
 <div class="container">
-    <form method="POST" enctype="multipart/form-data" class="p-2 form">
+    <form class="form p-2" method="POST" enctype="multipart/form-data" >
         <h1 class="text-center">Contact</h1>
         <p class="text-center">Do you have any questions, concerns or just want to get in touch with us? <br>
-            Fill out the form below and we'll respond as soon as we can!</p> <br>
+        Fill out the form below and we'll respond as soon as we can!</p> <br>
         {% csrf_token %}
         {{ form|crispy }}
         <div class="text-center">
