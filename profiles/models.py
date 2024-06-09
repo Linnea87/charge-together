@@ -17,11 +17,13 @@ class Profile(models.Model):
     user = models.ForeignKey(User, related_name="profile", on_delete=models.CASCADE)
     image = ResizedImageField(
         size=[640, 480],
+        crop=['middle', 'center'],
         quality=75,
         upload_to="profiles/",
         force_format="WEBP",
         blank=False,
     )
+
     bio = RichTextField(max_length=2500, null=True, blank=True)
     liked_posts = models.ManyToManyField(Post, related_name="liked_posts", blank=True)
 

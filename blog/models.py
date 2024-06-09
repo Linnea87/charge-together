@@ -19,7 +19,8 @@ class Post(models.Model):
         User, related_name="post_owner", on_delete=models.CASCADE
     )
     image = ResizedImageField(
-        size=[400, None],
+        size=[640, 480],
+        crop=['middle', 'center'],
         quality=75,
         upload_to="blog/",
         force_format="WEBP",
@@ -45,13 +46,19 @@ class Post(models.Model):
 
 
 class PostLike(models.Model):
-    """Model representing a like for a specific post by a user. Code used from the Code Institute's I think, Therefore I blog."""
+    """
+    Model representing a like for a specific post by a user. 
+    Code used from the Code Institute's I think, Therefore I blog.
+    """
 
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 class Comment(models.Model):
+    """
+    
+    """
     post = models.ForeignKey(Post, related_name="comments", on_delete=models.CASCADE)
     user = models.ForeignKey(User, related_name="commenter", on_delete=models.CASCADE)
     body = models.TextField()
