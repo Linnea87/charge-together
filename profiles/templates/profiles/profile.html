@@ -16,16 +16,17 @@
                         {% else %}
                         <img src="{% static '/icons/no-image-photography-icon.webp' %}" alt="Image not found icon">
                     {% endif %}
+                    <br><br>
+                        <p><strong>Name: </strong>{{profile.user.username}}</p>
+                        <p><strong>Joined: </strong>{{profile.user.date_joined|date:'d M Y'}}</p>
+                        <p><strong>Post: </strong>{{profile.user.post_owner.count}}</p>
                     {% if request.user == profile.user %}
                             <button id="myBtn" class="btn btn-secondary w-30 btn-edit">Edit Profile</button>
                          {% endif %}
                 </div>
                 <div class="col-md-8">
                     <div class="profile-card-body">
-                        <h1 class="text-center">About Me:</h1>
-                        <small><p><strong>Name: </strong>{{profile.user.username}}</p></small>
-                        <small><p><strong>Joined: </strong>{{profile.user.date_joined|date:'d M Y'}}</p></small>
-                        <small><p><strong>Post: </strong>{{profile.user.post_owner.count}}</p></small>
+                        <h1 class="text-center">About Me!</h1>
                         <hr>
                         <div class="text-center">
                             {% if profile.bio is not none %}
@@ -35,14 +36,13 @@
                     </div>
                 </div>
             </div>
-        </div>
-        
+        </div> 
     </div>
 </div>
 <!-- Users own blog posts on their profile -->
 <div class="latest-bg">
     <h2 class="text-center">Latest Post</h2>
-    <div class="card-container d-flex flex-row flex-wrap justify-content-center row row-cols-1 row-cols-md-3">
+    <div class="lastest-card card-container d-flex flex-row flex-wrap justify-content-center row row-cols-1 row-cols-md-3">
         {% for post in profile.user.post_owner.all %}
             <div class="card mb-3">
                 <a href="{% url 'post_detail' post.id %}" class="post" aria-label="Click to view {{post.title}}"></a>
