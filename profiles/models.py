@@ -16,7 +16,7 @@ class Profile(models.Model):
 
     user = models.ForeignKey(User, related_name="profile", on_delete=models.CASCADE)
     image = ResizedImageField(
-        size=[300, 300],
+        size=[640, 480],
         quality=75,
         upload_to="profiles/",
         force_format="WEBP",
