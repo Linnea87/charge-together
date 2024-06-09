@@ -116,7 +116,7 @@ footer {
 
 .navbar-brand img {
     /* Styling of logo for small screens */
-    width: 18rem;
+    width: 14rem;
     height: auto;
 }
 
@@ -165,18 +165,26 @@ a.dropdown-menu:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* opacity: 0.8; */
-    height: 70vh;
-    width: 95vw;
-    border-radius: 10px;
+    height: 95%;
+    width: 95%;
+    
 }
+
+.my-2 {
+
+    margin-top: 0.5rem;
+    margin-bottom: 6.5rem !important;
+}
+
+
 
 .hero-card-bg {
     background-color: rgba(143, 174, 176, 0.789);
     width: 50rem;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    width: 24rem;
 }
-
-
 
 
 /* Styling Blog Post */
@@ -272,6 +280,10 @@ a.dropdown-menu:hover {
 
 }
 
+.lastest-card {
+    width: 80%
+}
+
 
 /* Styling About Page */
 
@@ -293,6 +305,11 @@ a.dropdown-menu:hover {
 
 @media screen and (min-width:40em) {
 
+    .navbar-brand img {
+        /* Styling of logo for medium screens */
+        width: 20rem;
+    }
+
     .form {
         width: 50%;
     }
@@ -308,6 +325,24 @@ a.dropdown-menu:hover {
         margin-bottom: 1rem;
 
     }
+
+    .hero-section {
+        height: 70vh;
+        width: 90vw;
+        
+    }
+
+    .hero-card-bg {
+        width: 50rem;
+    }
+
+    .my-2 {
+
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem !important;
+    }
+    
+
 
 }
 
@@ -325,11 +360,10 @@ a.dropdown-menu:hover {
     }
 
     .site-header img {
-        width: 50rem;
+        width: 40rem;
         height: auto;
-        margin-left: 26%;
-        
-        padding-top: 2rem;
+        margin-left: 18%;
+        padding-top: 4rem;
 
     }
 
@@ -343,19 +377,19 @@ a.dropdown-menu:hover {
     }
 
     .navbar-nav > li{
-        padding-left:40px;
-        padding-right:40px;
+        padding-left:50px;
+        padding-right:50px;
     }
 
   
     .dropdown-menu[data-bs-popper] {
-        left: -18px;
-        --bs-dropdown-bg:rgba(255, 255, 255, 0.811);
-        /* top: 110%; */
+        left: 20px;
+        --bs-dropdown-bg: #d8d8d8;;
+        top: 116%;
         --bs-dropdown-padding-y: -2.5rem;
+       
 
     }
-
 
     .dropdown-menu {
         --bs-dropdown-min-width: 8rem;
@@ -363,6 +397,12 @@ a.dropdown-menu:hover {
     
     }
 
+
+    .my-2 {
+        margin-top: 2.5rem !important;
+        margin-bottom: 4.5rem !important;
+    }
+    
 
     .main-title {
         width: 50%;
@@ -380,6 +420,7 @@ a.dropdown-menu:hover {
     }
 
     .post-detail {
+        margin-top: 1rem;
         width: 60%;
         padding: 2rem;
     }
@@ -418,4 +459,14 @@ a.dropdown-menu:hover {
 
     }
 
+}
+
+@media screen and (min-width:90em) {
+
+    .site-header img {
+      
+        margin-left: 30%;
+
+
+    }
 }
