@@ -14,7 +14,7 @@
 
 
     /* Utils */
-    --small-box-shadow: 1px 4px 7px 0 #00000061;
+    --smal-box-shadow: 1px -1px 7px 0 #00000061;
     --border: 1px solid #00000030;
 }
 
@@ -40,24 +40,40 @@ h6 {
     font-family: var(--title);
 }
 
+
 main {
     flex: 1 0 auto;
     background-color: var(--white);
 }
+
+
+/* Form Styling */
+.form {
+    width: 100%;
+    margin: 3% auto;
+    box-shadow: var(--small-box-shadow);
+    border-radius: 5px;
+    text-align: left;
+    background-color: var(--soft-green);
+}
+
 
 /* Buttons */
 
 .btn-like {
     border: none;
     background-color: var(--white);
-    font-size: 17px;
+    font-size: 100%;
 }
-.fa-comments{
-    font-size: 17px;
+
+.bi-chat {
+    font-size: 100%;
 }
+
 .btn-edit {
     margin-top: 1rem;
 }
+
 
 /* Comments  */
 
@@ -66,8 +82,8 @@ main {
     border-radius: 8px;
     margin-block: 1rem;
     margin-bottom: 1rem;
-    width: 30rem;
-    padding: 1rem 1rem 1rem;
+    padding-inline-start: 0.5rem;
+    width: 15rem;
     height: 90%;
 
 }
@@ -92,10 +108,25 @@ footer {
 
 /* Header and Navigation */
 
+.site-header {
+    /* Hides the styling of the logo for larger screens */
+    display: none;
+}
+
+
+.navbar-brand img {
+    /* Styling of logo for small screens */
+    width: 18rem;
+    height: auto;
+}
+
+
 .navbar {
-    background: var(--white);
+   
+    background-color: var(--white);
 
 }
+
 
 a.nav-link {
     color: var(--black);
@@ -103,48 +134,61 @@ a.nav-link {
 
 }
 
+a.nav-link:hover {
+    color: var(--grey-green);
+
+
+}
+
+
+
+.dropdown-menu {
+    --bs-dropdown-min-width: 8rem;
+    --bs-dropdown-border-width: 0px;
+
+}
+
+
+a.dropdown-menu:hover {
+    --bs-nav-link-hover-color: ;
+}
+
+
 .active {
-    border-bottom: 1px solid var(--grey-green);
-
-
-}
-
-img.logo {
-    width: 18.75rem;
+   background-color: rgba(143, 174, 176, 0.587);
 
 }
 
-.hero img {
-   width:100%;
-   height: auto;
+
+.hero-section {
+    background-image: url("../images/carl-hunley-jr-kZ_GzLAy4WM-unsplash.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* opacity: 0.8; */
+    height: 70vh;
+    width: 95vw;
+    border-radius: 10px;
+}
+
+.hero-card-bg {
+    background-color: rgba(143, 174, 176, 0.789);
+    width: 50rem;
 }
 
 
-
-/* Form Styling */
-.form {
-    width: 100%;
-    margin: 3% auto;
-    box-shadow: var(--small-box-shadow);
-    border-radius: 5px;
-    text-align: left;
-}
 
 
 /* Styling Blog Post */
 
 .card {
-  
-    padding: 1rem 1rem 1rem;
-    height: 92%;
+    margin-top: 1rem;
+    padding: 1rem;
+    height: 91%;
     box-shadow: var(--small-box-shadow);
-}
 
-.card img {
-    border-radius: 8px; 
 
 }
-
 
 .post {
     text-decoration: none;
@@ -159,21 +203,24 @@ img.logo {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: var(--small-box-shadow);
-    border-radius: 8px;
-    border: 1px solid var(--grey-green);
+
 
 }
 
 .post-container {
     display: flex;
     flex-direction: column;
-    background-color: var(--soft-green);
-    border-radius: 8px;
 }
 
+.content {
+    background-color: var(--soft-green);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+
 .post-detail {
-    width: 100%;
+    width: 90%;
 
 }
 
@@ -182,17 +229,17 @@ img.logo {
 }
 
 .post-img {
-    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
 
+
 }
 
 
 .post-pic {
-    width: 100%;
+    width: 70%;
     height: auto;
     border-radius: 8px;
 }
@@ -200,14 +247,16 @@ img.logo {
 
 /* Profile styling */
 
+
+
 .profile-img img {
     border-radius: 8px;
     width: 100%;
 }
 
 .card-container {
-    
     padding-bottom: 3rem;
+    margin-left: 1rem;
 }
 
 .profile-card {
@@ -223,23 +272,21 @@ img.logo {
 
 }
 
+
+/* Styling About Page */
+
 .about-bg {
-    padding: 1rem;
     background-color: var(--soft-green);
 }
 
 .about-card {
-    margin-top: 1rem;
-    padding-top: 2rem;
-    padding-bottom: 3rem;
+    border: none;
+    margin-top: 20px;
 
 }
 
 .about-card img {
     border-radius: 8px;
-    width: 20rem;
-    margin-left: 5rem;
-
 }
 
 /* Media screens */
@@ -254,21 +301,81 @@ img.logo {
         flex-direction: row;
         width: 29%;
     }
-    
+
+    .latest-bg {
+        background-color: var(--soft-green);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+    }
+
 }
 
+@media screen and (min-width:62.5em) {
 
-@media screen and (min-width: 62.5em) {
+    /* Hides the styling of logo for small screens */
+    .navbar-brand img {
+        display: none;
+
+    }
+
+    /* Displays the styling of logo for large screens */
+    .site-header {
+        display: flex ;
+    }
+
+    .site-header img {
+        width: 50rem;
+        height: auto;
+        margin-left: 26%;
+        
+        padding-top: 2rem;
+
+    }
+
+    /* navbar styling for large screens */
+
+    .navbar {
+       
+        margin-top:3rem;
+        border-bottom: 0.1px solid;
+        
+    }
+
+    .navbar-nav > li{
+        padding-left:40px;
+        padding-right:40px;
+    }
+
+  
+    .dropdown-menu[data-bs-popper] {
+        left: -18px;
+        --bs-dropdown-bg:rgba(255, 255, 255, 0.811);
+        /* top: 110%; */
+        --bs-dropdown-padding-y: -2.5rem;
+
+    }
+
+
+    .dropdown-menu {
+        --bs-dropdown-min-width: 8rem;
+       
     
+    }
+
+
+    .main-title {
+        width: 50%;
+    }
+
+
     .post-info {
         flex-direction: row;
         border: 1px solid var(--grey-green);
 
-
     }
 
     .post-img {
-        width: 40%;
         margin: 0 auto;
     }
 
@@ -295,10 +402,20 @@ img.logo {
         text-decoration: none;
     }
 
-    .navbar-brand {
-        --bs-navbar-brand-margin-end: 45.5rem;
-        margin-left: 1rem;
+
+    .social-icon {
+        height: 3rem;
+        margin: 2rem;
     }
 
-   
+    .post-pic {
+        border-radius: 8px;
+    }
+
+    .card-container {
+        width: 50rem;
+        padding-bottom: 3rem;
+
+    }
+
 }
