@@ -301,7 +301,7 @@ a.dropdown-menu:hover {
     border-radius: 8px;
 }
 
-/* Media screens */
+/* responsivn styling for tablet, laptop and desktop */
 
 @media screen and (min-width:40em) {
 
