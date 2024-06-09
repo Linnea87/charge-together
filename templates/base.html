@@ -4,36 +4,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
 
     <!-- Meta tags for search engines -->
     <meta name="description" content="Charge Together, Welcome to our amazing blog about Charge Syndrome for families and relatives">
     <meta name="keywords" content="Charge Together, charge syndrome, rare syndrome, families, relatives">
 
-   <!-- Font awesome -->
-   <script src="https://kit.fontawesome.com/4c48fa6f4b.js" crossorigin="anonymous"></script>
+    {% block onload_js %}
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+    {% endblock %}
 
+    {% block extra_css %}
     <!-- Bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    
-        <!-- Custom css -->
+    <!-- Custom css -->
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    {% endblock %}
 
-     <!-- Favicon -->
-     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
-     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
-     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
-     <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
- 
-    
-   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!--- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static '/favicon/site.webmanifest' %}">
+
     <title>Charge Together - {% block title %}{% endblock title %}</title>
 </head>
+
 <body>
     <!-- Header -->
     {% include "includes/header.html" %}
+    
     <!-- Django messages -->
     <div class="container">
         <div class="row">
@@ -55,31 +68,20 @@
         </div>
     </div>
     <main>
-        <!--Here goes all my templates content -->
         {% block content %}
+         <!--Here goes all my templates content -->
         {% endblock content %}
     </main>
+
     <!-- Footer -->
     {% include "includes/footer.html" %}
 
-     
-    <!-- set a time out for my messages-->
-    <script>
-        setTimeout(function () {
-            let messages = document.getElementById('msg');
-            let alert = new bootstrap.Alert(messages);
-            alert.close();
-        }, 2000);
-    </script>
-</body>
+    
+    <!-- Some extra js that exsist in profile.html -->
+    {% block extra_js %}  
 
-
-<!-- Bootstrap js -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
-</script>
+    {% endblock extra_js %}
      
-<!-- Some extra js that exsist in profile.html -->
-{% block extra_js %}   
- {% endblock extra_js %}
+    
+</body>  
 </html>

@@ -10,15 +10,14 @@
 <div class="card-container d-flex flex-row flex-wrap justify-content-center">
   {% for post in post_list %}
   <a href="{% url 'post_detail' post.id %}" class="post" aria-label="Click to view {{post.title}}">
-    <div class="card m-3" 18rem>
-      <img src="{{post.image.url}}" class="card-img-top"  alt="{{post.image_alt}}">
+    <div class="card m-3" style="width:18rem;">
+      <img src="{{post.image.url}}" class="card-img-top img-fluid"  alt="{{post.image_alt}}">
       <div class="card-body">
         <h3 class="card-title">{{post.title}}</h3>
         <hr>
-        <p class="card-text">{{post.excerpt|truncatechars:100}}</p>
+        <p class="card-text">{{post.excerpt|truncatechars:60}}</p>
         <hr>
-        <p class="card-text text-muted h6"> <small>{{post.created_on}} <i class="far fa-heart"></i> {{post.number_of_likes}} </small></p>
-        <p class="card-text text-muted h6"> <small> <i class="far fa-comments"></i> {{ post.comments.count }} </small></p>
+        <p class="card-text text-muted"> <small>{{post.created_on}} <i class="bi bi-suit-heart"></i> {{post.number_of_likes}}</small> <small> <i class="bi bi-chat"></i> {{ post.comments.count }} </small></p>
       </div>
     </div>
   </a>
