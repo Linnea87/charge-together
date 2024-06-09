@@ -122,7 +122,7 @@ footer {
 
 
 .navbar {
-   
+
     background-color: var(--white);
 
 }
@@ -155,7 +155,7 @@ a.dropdown-menu:hover {
 
 
 .active {
-   background-color: rgba(143, 174, 176, 0.587);
+    background-color: rgba(143, 174, 176, 0.587);
 
 }
 
@@ -167,7 +167,7 @@ a.dropdown-menu:hover {
     background-repeat: no-repeat;
     height: 95%;
     width: 95%;
-    
+
 }
 
 .my-2 {
@@ -329,7 +329,7 @@ a.dropdown-menu:hover {
     .hero-section {
         height: 70vh;
         width: 90vw;
-        
+
     }
 
     .hero-card-bg {
@@ -341,8 +341,6 @@ a.dropdown-menu:hover {
         margin-top: 0.5rem;
         margin-bottom: 0.5rem !important;
     }
-    
-
 
 }
 
@@ -356,7 +354,7 @@ a.dropdown-menu:hover {
 
     /* Displays the styling of logo for large screens */
     .site-header {
-        display: flex ;
+        display: flex;
     }
 
     .site-header img {
@@ -370,31 +368,32 @@ a.dropdown-menu:hover {
     /* navbar styling for large screens */
 
     .navbar {
-       
-        margin-top:3rem;
+
+        margin-top: 3rem;
         border-bottom: 0.1px solid;
-        
+
     }
 
-    .navbar-nav > li{
-        padding-left:50px;
-        padding-right:50px;
+    .navbar-nav>li {
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
-  
+
     .dropdown-menu[data-bs-popper] {
         left: 20px;
-        --bs-dropdown-bg: #d8d8d8;;
+        --bs-dropdown-bg: #d8d8d8;
+        ;
         top: 116%;
         --bs-dropdown-padding-y: -2.5rem;
-       
+
 
     }
 
     .dropdown-menu {
         --bs-dropdown-min-width: 8rem;
-       
-    
+
+
     }
 
 
@@ -402,7 +401,7 @@ a.dropdown-menu:hover {
         margin-top: 2.5rem !important;
         margin-bottom: 4.5rem !important;
     }
-    
+
 
     .main-title {
         width: 50%;
@@ -464,9 +463,6 @@ a.dropdown-menu:hover {
 @media screen and (min-width:90em) {
 
     .site-header img {
-      
         margin-left: 30%;
-
-
     }
 }
