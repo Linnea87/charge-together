@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
     "localhost",
     ".herokuapp.com",
     "8000-linnea87-chargetogether-ptbdtbue0qj.ws-us114.gitpod.io",
+    "8000-linnea87-chargetogether-ptbdtbue0qj.ws-eu114.gitpod.io",
     "127.0.0.1",
 ]
 
