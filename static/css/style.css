@@ -440,6 +440,11 @@ a.nav-link:hover {
 
     }
 
+    .profile-card {
+        padding-top: 2rem;
+    }
+
+
     .profile-post {
         width: 70%;
         padding: 1.5rem 3rem;
@@ -459,6 +464,7 @@ a.nav-link:hover {
         border-radius: 8px;
     }
 
+
     .card-container {
         width: 50rem;
         padding-bottom: 3rem;
@@ -469,10 +475,7 @@ a.nav-link:hover {
         margin-top: 2rem;
     }
 
-    /* .profile img {
-        width: 100%;
-    }
-     */
+    
 
 }
 
