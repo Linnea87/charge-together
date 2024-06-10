@@ -111,7 +111,7 @@ main {
 
 .like-count {
     font-size: 20px;
-    /* color: white !important; */
+    color: black!important;
     display: contents;
     padding-right: 10px;
 
