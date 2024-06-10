@@ -1,21 +1,18 @@
-
 :root {
     /* Fonts */
     --title: 'EB Garamond', serif;
     --main-font: 'Roboto', serif;
 
-
     /* Color */
     --white: #fff;
     --off-white: #f6f6f6;
     --black: #000;
-    --soft-green:  #AACCCC;
+    --soft-green: #AACCCC;
     --grey-green: #24494c71;
-
 
     /* Utils */
     --smal-box-shadow: 1px -1px 7px 0 #00000061;
-    --border: 1px solid ##00000030;
+    --border: 1px solid #00000030;
 
     /* Hero */
     --image: url("../images/carl-hunley-jr-kZ_GzLAy4WM-unsplash.webp");
@@ -33,7 +30,6 @@ body {
     flex-direction: column;
     font-family: var(--main-font);
 }
-
 
 
 h1,
@@ -58,7 +54,7 @@ main {
     background-repeat: no-repeat;
     height: 95%;
     width: 95%;
-   
+
 
 }
 
@@ -84,20 +80,10 @@ main {
     margin: 3% auto;
     box-shadow: var(--small-box-shadow);
     border-radius: 5px;
-    
-    
+
+
 }
 
-
-
-
-/* Buttons */
-
-.btn-like {
-    border: none;
-    background-color: var(--white);
-    font-size: 100%;
-}
 
 .bi-chat {
     font-size: 100%;
@@ -113,6 +99,21 @@ main {
     padding-inline-start: 0.5rem;
     width: 15rem;
     height: 90%;
+
+}
+
+.comment-count {
+    margin-left: 10px;
+    width: fit-content;
+    font-size: 20px;
+
+}
+
+.like-count {
+    font-size: 20px;
+    /* color: white !important; */
+    display: contents;
+    padding-right: 10px;
 
 }
 
@@ -151,33 +152,9 @@ footer {
 
 .nav-link {
 
-   
-
-    --bs-nav-link-color: var(--bs-navbar-color);
     --bs-nav-link-hover-color: var(--soft-green);
 
 }
-
-.nav-link.active {
-    
-    color: var(--bs-navbar-active-color);
-}
-
-
-
-
-/* a.nav-link {
-    color: var(--black);
-
-
-} */
-
-/* a.nav-link:hover {
-    color: var(--grey-green);
-
-
-} */
-
 
 
 .dropdown-menu {
@@ -185,14 +162,6 @@ footer {
     --bs-dropdown-border-width: 0px;
 
 }
-
-
-/* .active {
-    background-color: rgba(143, 174, 176, 0.587);
-
-} */
-
-
 
 
 /* Styling Blog Post */
@@ -212,10 +181,10 @@ footer {
     bottom: 55%;
     min-width: 30%;
     /* left: 1px; */
-    background-color:rgba(143, 174, 176, 0.858);
+    background-color: rgba(143, 174, 176, 0.858);
     font-weight: 400;
-    
-    
+
+
 }
 
 
@@ -343,9 +312,9 @@ footer {
 
     .lastest-card {
         width: 100%;
-    
+
     }
-    
+
 
     .hero-section {
         height: 70vh;
@@ -403,21 +372,20 @@ footer {
     }
 
 
-    .dropdown-menu[data-bs-popper] {
+    .dropdown-menu {
         left: 20px;
         --bs-dropdown-bg: rgb(225, 236, 238);
         top: 116%;
         --bs-dropdown-padding-y: -2.5rem;
-
-
-    }
-
-    .dropdown-menu {
         --bs-dropdown-min-width: 8rem;
+        --bs-dropdown-link-color: rgba(0, 0, 0, 0.55);
+        --bs-dropdown-link-hover-color: var(--soft-green);
+        --bs-dropdown-link-hover-bg: none;
+        --bs-dropdown-link-active-color: rgba(0, 0, 0, 0.9);
+        --bs-dropdown-link-active-bg: none;
 
 
     }
-
 
     .my-2 {
         margin-top: 2.5rem !important;
@@ -446,7 +414,7 @@ footer {
 
     .profile-post {
         width: 70%;
-        padding:  3rem;
+        padding: 3rem;
     }
 
     .profile-post a {
@@ -473,9 +441,6 @@ footer {
     .about-bg {
         margin-top: 2rem;
     }
-
-    
-
 }
 
 @media screen and (min-width:90em) {
