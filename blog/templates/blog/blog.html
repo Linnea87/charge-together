@@ -22,7 +22,7 @@
         <hr>
         <p class="card-text">{{post.excerpt|truncatechars:60}}</p>
         <hr>
-        <p class="card-text text-muted"> <small>{{post.created_on}} <i class="bi bi-suit-heart"></i> {{post.number_of_likes}}</small> <small> <i class="bi bi-chat"></i> {{ post.comments.count }} </small></p>
+        <p class="card-text text-muted">{{post.created_on}} <i class="bi bi-chat"></i> {{ post.comments.count }} <i class="bi bi-suit-heart"></i> {{post.number_of_likes}} </p>
       </div>
     </div>
   </a>

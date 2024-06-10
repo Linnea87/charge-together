@@ -88,16 +88,13 @@ main {
     
 }
 
-
-
-
 /* Buttons */
 
-.btn-like {
+/* .btn-like {
     border: none;
     background-color: var(--white);
     font-size: 100%;
-}
+} */
 
 .bi-chat {
     font-size: 100%;
@@ -114,6 +111,20 @@ main {
     width: 15rem;
     height: 90%;
 
+}
+
+.comment-count {
+    margin-left: 10px;
+    width: fit-content;
+    font-size: 20px;
+}
+
+.like-count {
+    font-size: 20px;
+    /* color: white !important; */
+    display: contents;
+    padding-right: 10px;
+    font-weight: 100;
 }
 
 /* Footer */
