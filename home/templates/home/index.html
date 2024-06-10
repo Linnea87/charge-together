@@ -4,52 +4,50 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-    <div class="hero-section container-fluid d-flex align-items-center justify-content-center my-2">
-        <div class="card text-center mb-3 hero-card-bg">
-            <div class="card-body">
-                {% if user.is_authenticated %}
-                <h1>Welcome Back {{ user.username }} !</h1>
-                <p>
-                    We're thrilled to see you again. As a signed-in member, you have the special ability
-                    to write your own blog posts, leave comments, like others' posts and making our community vibrant and interactive.
-                </p>
-                <p>
-                    Your voice and engagement are essential in creating a supportive space where we can share knowledge,
-                    experiences, and encouragement. Whether you're sharing your story, offering feedback, 
-                    or appreciating others' contributions, your participation makes a real difference.
-                </p>
-                <p>  
-                    Thank you for being an active and valued member of our community.
-                    Together, we can support and inspire each other on this journey!
-                </p>
-                <p>
-                    With all my love  <i class="bi bi-suit-heart-fill"></i><br>
-                    Linnea, Admin
-                </p>
-                {% else %}
-                <h1 class=" mx-auto p-2">Welcome To Our CHARGE Syndrome Community</h1>
-                <p>
-                    Welcome to our blog, a dedicated space for families and relatives of individuals 
-                    with CHARGE syndrome.
-                    Here, you will find a wealth of information, support, and community as
-                    we navigate the complexities of this unique genetic condition together. 
-                    CHARGE syndrome presents a variety of challenges, but you are not alone.
-                </p>
-                    
-                <p>
-                    Whether you are a parent, sibling, grandparent, or extended family member, this blog is 
-                    designed to offer you the knowledge and encouragement needed to support your loved one.
-                    We celebrate the resilience, strength, and love that binds families together in the face of CHARGE syndrome.
-                    Join us as we share experiences, resources, and hope, creating a supportive network for all families 
-                    touched by CHARGE syndrome!
-                </p>
-                <a href="/accounts/signup/" role="button" class="btn btn-primary w-25">Join Us Now!</a>
-                {% endif %}
-            </div>
+<div class="hero-section container-fluid d-flex align-items-center justify-content-center my-2">
+    <div class="card text-center mb-3 hero-card-bg">
+        <div class="card-body">
+            {% if user.is_authenticated %}
+            <h1>Welcome Back {{ user.username }} !</h1>
+            <p>
+                We're thrilled to see you again. As a signed-in member, you have the special ability
+                to write your own blog posts, leave comments, like others' posts and making our community vibrant and
+                interactive.
+            </p>
+            <p>
+                Your voice and engagement are essential in creating a supportive space where we can share knowledge,
+                experiences, and encouragement. Whether you're sharing your story, offering feedback,
+                or appreciating others' contributions, your participation makes a real difference.
+            </p>
+            <p>
+                Thank you for being an active and valued member of our community.
+                Together, we can support and inspire each other on this journey!
+            </p>
+            <p>
+                With all my love <br> <i class="bi bi-suit-heart-fill"></i><br>
+                Linnea, Admin
+            </p>
+            {% else %}
+            <h1 class=" mx-auto p-2">Welcome To Our CHARGE Syndrome Community</h1>
+            <p>
+                Welcome to our blog, a dedicated space for families and relatives of individuals
+                with CHARGE syndrome.
+                Here, you will find a wealth of information, support, and community as
+                we navigate the complexities of this unique genetic condition together.
+                CHARGE syndrome presents a variety of challenges, but you are not alone.
+            </p>
+
+            <p>
+                Whether you are a parent, sibling, grandparent, or extended family member, this blog is
+                designed to offer you the knowledge and encouragement needed to support your loved one.
+                We celebrate the resilience, strength, and love that binds families together in the face of CHARGE
+                syndrome.
+                Join us as we share experiences, resources, and hope, creating a supportive network for all families
+                touched by CHARGE syndrome!
+            </p>
+            <a href="{% url 'account_signup' %}" role="button" class="btn btn-primary w-25">Join Us Now!</a>
+            {% endif %}
         </div>
     </div>
+</div>
 {% endblock content %}
-
-
-
-
