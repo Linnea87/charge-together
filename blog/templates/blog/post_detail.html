@@ -63,7 +63,7 @@
         <a class="btn btn-primary btn-sm mb-4" href="{% url 'new_comment' pk=post.pk %}" role="button">Add comment</a>
         {% else %}
         <a class="text-decoration-none" href="{% url 'account_login' %}">
-            <p>Sign in to leave a comment</p>
+            <p> Sign in to like and leave a comment</p>
         </a>
         {% endif %}
         {% for comment in post.comments.all %}
