@@ -149,24 +149,34 @@ footer {
 }
 
 
-.navbar {
+.nav-link {
 
-    background-color: var(--white);
+   
+
+    --bs-nav-link-color: var(--bs-navbar-color);
+    --bs-nav-link-hover-color: var(--soft-green);
 
 }
 
+.nav-link.active {
+    
+    color: var(--bs-navbar-active-color);
+}
 
-a.nav-link {
+
+
+
+/* a.nav-link {
     color: var(--black);
 
 
-}
+} */
 
-a.nav-link:hover {
+/* a.nav-link:hover {
     color: var(--grey-green);
 
 
-}
+} */
 
 
 
@@ -177,10 +187,10 @@ a.nav-link:hover {
 }
 
 
-.active {
+/* .active {
     background-color: rgba(143, 174, 176, 0.587);
 
-}
+} */
 
 
 
@@ -324,11 +334,6 @@ a.nav-link:hover {
         width: 50%;
     }
 
-    /* .img-container {
-        flex-direction: row;
-        width: 29%;
-    } */
-
     .latest-bg {
         background-color: var(--soft-green);
         margin-top: 1rem;
@@ -358,9 +363,7 @@ a.nav-link:hover {
         margin-bottom: 0.5rem !important;
     }
 
-    /* .post-pic {
-        width: 90%;
-    } */
+
 
 }
 
@@ -440,14 +443,10 @@ a.nav-link:hover {
 
     }
 
-    .profile-card {
-        padding-top: 2rem;
-    }
-
 
     .profile-post {
         width: 70%;
-        padding: 1.5rem 3rem;
+        padding:  3rem;
     }
 
     .profile-post a {

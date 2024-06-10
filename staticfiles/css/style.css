@@ -1,21 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
-
 
 :root {
     /* Fonts */
     --title: 'EB Garamond', serif;
     --main-font: 'Roboto', serif;
 
+
     /* Color */
-    --white: #FFFFFF;
-    --black: #000000;
-    --soft-green: #6a8c8f30;
+    --white: #fff;
+    --off-white: #f6f6f6;
+    --black: #000;
+    --soft-green:  #AACCCC;
     --grey-green: #24494c71;
 
 
     /* Utils */
     --smal-box-shadow: 1px -1px 7px 0 #00000061;
-    --border: 1px solid #00000030;
+    --border: 1px solid ##00000030;
+
+    /* Hero */
+    --image: url("../images/carl-hunley-jr-kZ_GzLAy4WM-unsplash.webp");
 }
 
 /* Main Style setting */
@@ -31,6 +34,8 @@ body {
     font-family: var(--main-font);
 }
 
+
+
 h1,
 h2,
 h3,
@@ -40,10 +45,36 @@ h6 {
     font-family: var(--title);
 }
 
-
 main {
     flex: 1 0 auto;
     background-color: var(--white);
+}
+
+
+.hero-section {
+    background-image: var(--image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 95%;
+    width: 95%;
+   
+
+}
+
+.my-2 {
+
+    margin-top: 0.5rem;
+    margin-bottom: 6.5rem !important;
+}
+
+
+.hero-card-bg {
+    background-color: rgba(143, 174, 176, 0.789);
+    width: 50rem;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    width: 24rem;
 }
 
 
@@ -53,9 +84,11 @@ main {
     margin: 3% auto;
     box-shadow: var(--small-box-shadow);
     border-radius: 5px;
-    text-align: left;
-    background-color: var(--soft-green);
+    
+    
 }
+
+
 
 
 /* Buttons */
@@ -69,11 +102,6 @@ main {
 .bi-chat {
     font-size: 100%;
 }
-
-.btn-edit {
-    margin-top: 1rem;
-}
-
 
 /* Comments  */
 
@@ -116,29 +144,39 @@ footer {
 
 .navbar-brand img {
     /* Styling of logo for small screens */
-    width: 18rem;
+    width: 14rem;
     height: auto;
 }
 
 
-.navbar {
+.nav-link {
+
    
-    background-color: var(--white);
+
+    --bs-nav-link-color: var(--bs-navbar-color);
+    --bs-nav-link-hover-color: var(--soft-green);
 
 }
 
+.nav-link.active {
+    
+    color: var(--bs-navbar-active-color);
+}
 
-a.nav-link {
+
+
+
+/* a.nav-link {
     color: var(--black);
 
 
-}
+} */
 
-a.nav-link:hover {
+/* a.nav-link:hover {
     color: var(--grey-green);
 
 
-}
+} */
 
 
 
@@ -149,32 +187,10 @@ a.nav-link:hover {
 }
 
 
-a.dropdown-menu:hover {
-    --bs-nav-link-hover-color: ;
-}
+/* .active {
+    background-color: rgba(143, 174, 176, 0.587);
 
-
-.active {
-   background-color: rgba(143, 174, 176, 0.587);
-
-}
-
-
-.hero-section {
-    background-image: url("../images/carl-hunley-jr-kZ_GzLAy4WM-unsplash.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* opacity: 0.8; */
-    height: 70vh;
-    width: 95vw;
-    border-radius: 10px;
-}
-
-.hero-card-bg {
-    background-color: rgba(143, 174, 176, 0.789);
-    width: 50rem;
-}
+} */
 
 
 
@@ -183,12 +199,25 @@ a.dropdown-menu:hover {
 
 .card {
     margin-top: 1rem;
-    padding: 1rem;
-    height: 91%;
+    /* padding: 1rem; */
+    height: 90%;
     box-shadow: var(--small-box-shadow);
 
 
 }
+
+/* code from "I think therfore I blog" with some modification to fit whit my own code */
+.image-flash {
+    position: absolute;
+    bottom: 55%;
+    min-width: 30%;
+    /* left: 1px; */
+    background-color:rgba(143, 174, 176, 0.858);
+    font-weight: 400;
+    
+    
+}
+
 
 .post {
     text-decoration: none;
@@ -206,6 +235,7 @@ a.dropdown-menu:hover {
 
 
 }
+
 
 .post-container {
     display: flex;
@@ -239,7 +269,7 @@ a.dropdown-menu:hover {
 
 
 .post-pic {
-    width: 70%;
+    width: 60%;
     height: auto;
     border-radius: 8px;
 }
@@ -254,13 +284,9 @@ a.dropdown-menu:hover {
     width: 100%;
 }
 
-.card-container {
-    padding-bottom: 3rem;
-    margin-left: 1rem;
-}
 
 .profile-card {
-    margin-top: 2rem;
+    margin-top: 1rem;
 
 }
 
@@ -269,6 +295,12 @@ a.dropdown-menu:hover {
     background-color: var(--soft-green);
     margin-top: 4rem;
     margin-bottom: 4rem;
+
+}
+
+.lastest-card {
+    width: 60%;
+    margin-left: 1rem;
 
 }
 
@@ -289,17 +321,17 @@ a.dropdown-menu:hover {
     border-radius: 8px;
 }
 
-/* Media screens */
+/* responsivn styling for tablet, laptop and desktop */
 
 @media screen and (min-width:40em) {
 
-    .form {
-        width: 50%;
+    .navbar-brand img {
+        /* Styling of logo for medium screens */
+        width: 20rem;
     }
 
-    .img-container {
-        flex-direction: row;
-        width: 29%;
+    .form {
+        width: 50%;
     }
 
     .latest-bg {
@@ -308,6 +340,30 @@ a.dropdown-menu:hover {
         margin-bottom: 1rem;
 
     }
+
+    .lastest-card {
+        width: 100%;
+    
+    }
+    
+
+    .hero-section {
+        height: 70vh;
+        width: 90vw;
+
+    }
+
+    .hero-card-bg {
+        width: 50rem;
+    }
+
+    .my-2 {
+
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem !important;
+    }
+
+
 
 }
 
@@ -321,46 +377,51 @@ a.dropdown-menu:hover {
 
     /* Displays the styling of logo for large screens */
     .site-header {
-        display: flex ;
+        display: flex;
     }
 
     .site-header img {
-        width: 50rem;
+        width: 40rem;
         height: auto;
-        margin-left: 26%;
-        
-        padding-top: 2rem;
+        margin-left: 18%;
+        padding-top: 4rem;
 
     }
 
     /* navbar styling for large screens */
 
     .navbar {
-       
-        margin-top:3rem;
+
+        margin-top: 3rem;
         border-bottom: 0.1px solid;
-        
+
     }
 
-    .navbar-nav > li{
-        padding-left:40px;
-        padding-right:40px;
+    .navbar-nav>li {
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
-  
+
     .dropdown-menu[data-bs-popper] {
-        left: -18px;
-        --bs-dropdown-bg:rgba(255, 255, 255, 0.811);
-        /* top: 110%; */
+        left: 20px;
+        --bs-dropdown-bg: rgb(225, 236, 238);
+        top: 116%;
         --bs-dropdown-padding-y: -2.5rem;
 
-    }
 
+    }
 
     .dropdown-menu {
         --bs-dropdown-min-width: 8rem;
-       
-    
+
+
+    }
+
+
+    .my-2 {
+        margin-top: 2.5rem !important;
+        margin-bottom: 4.5rem !important;
     }
 
 
@@ -369,33 +430,23 @@ a.dropdown-menu:hover {
     }
 
 
-    .post-info {
-        flex-direction: row;
-        border: 1px solid var(--grey-green);
-
-    }
-
-    .post-img {
-        margin: 0 auto;
-    }
-
     .post-detail {
+        margin-top: 1rem;
         width: 60%;
         padding: 2rem;
     }
 
-    .post-container {
-        flex-direction: row;
-
-    }
-
+    .post-container,
+    .post-info,
     .profile {
         flex-direction: row;
+
     }
+
 
     .profile-post {
         width: 70%;
-        padding: 1.5rem 3rem;
+        padding:  3rem;
     }
 
     .profile-post a {
@@ -412,10 +463,24 @@ a.dropdown-menu:hover {
         border-radius: 8px;
     }
 
+
     .card-container {
         width: 50rem;
         padding-bottom: 3rem;
 
     }
 
+    .about-bg {
+        margin-top: 2rem;
+    }
+
+    
+
+}
+
+@media screen and (min-width:90em) {
+
+    .site-header img {
+        margin-left: 30%;
+    }
 }
