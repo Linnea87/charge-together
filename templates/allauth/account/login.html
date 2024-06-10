@@ -7,9 +7,8 @@
 {% block content %}
   <div class="container">
     <h1 class="text-center">{% trans "Sign In" %}</h1>
-    <p class="text-center">{% blocktrans %}Are you not already part of our community? What are you waiting for, 
+    <p class="text-center">{% blocktrans %}Are you not already part of our community? What are you waiting for    
     <a href="{{ signup_url }}">sign up</a> now!{% endblocktrans %}</p>
-
     <form class="form p-2" method="POST" action="{% url 'account_login' %}">
       {% csrf_token %}
       {{ form|crispy }}
