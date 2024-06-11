@@ -145,7 +145,7 @@ footer {
 
 .navbar-brand img {
     /* Styling of logo for small screens */
-    width: 14rem;
+    width: 17rem;
     height: auto;
 }
 
@@ -333,6 +333,12 @@ footer {
     }
 
 
+    .post-pic {
+    width: 80%;
+    
+}
+
+
 
 }
 
@@ -428,12 +434,12 @@ footer {
     }
 
     .post-pic {
-        border-radius: 8px;
+        width: 100%;
     }
 
 
     .card-container {
-        width: 50rem;
+        width: 73rem;
         padding-bottom: 3rem;
 
     }
