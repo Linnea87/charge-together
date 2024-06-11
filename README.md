@@ -234,18 +234,25 @@ I used the [Color](https://coolors.co) tool 'image picker' where I used the head
 
 This is what the header looks like when you are not logged in. The logo is a simple design that I made myself.  The page that is active is marked with a solid line.
 
-![header not signed in](documentation/images/header-not-signed-in.png)
+![header not signed in](documentation/images/header-not-signedin.png)
+
+![header not signed in](documentation/images/header-small-screen.png)
 
 When the user are logged in, the header changes and instead of register and login the user now see their own username.
 And in the dropdown menu the user can go to their profile, create a blog post or log out
 
-![signed in header](documentation/images/header-signed-in.png)
+![signed in header](documentation/images/header-new.signed-in.png)
+
+![signed in header](documentation/images/dropdown-menu.png)
+
 
 ### Landing Page
 
 This is the landing page, beautiful and inviting in its simplicity.
 
-![home page](documentation/images/home_page.png)
+![home page](documentation/images/landing-page-not-signedin.png)
+
+![home page](documentation/images/landingpage-signedin.png)
 
 
 ### Blog page
@@ -312,7 +319,9 @@ The user can also see if they have liked or disliked the post. If they liked the
 
 When the user goes to their profile, all posts, both published and drafts that the user has created, are displayed. The user's bio and selected profile picture are also displayed here. The users can also see their name, when they created the account and how many posts they have written.
 
-![profile](documentation/images/profile-page.png)
+![profile](documentation/images/profile-new.png)
+
+![profile](documentation/images/profile-new-2.png)
 
 They can also update their profile.
 
@@ -400,7 +409,7 @@ When the user clicks on log out in the dropdown menu, they will be taken to a pa
 
 *If the user chooses to cancel, they are redirected back to their profile.*
 
-![cancel-logout](documentation/images/canceld-logout.png)
+![cancel-logout](documentation/images/profile-new.png)
 
 *If the user chooses to confirm, they are redirected to the landing page with a successful message.*
 
@@ -478,6 +487,14 @@ If there is some internal error with the page, 500 error is displayed with a mes
 
 ## Future Features
 
+- Users can visit each other's profiles
+
+- Users can also see all posts that they themselves have liked
+
+- Users can change passwords
+
+- basically implement the used stories that are not implemented
+
 ## Security
 
 ### Cross-Site Request Forgery (CSRF) Protection
@@ -500,7 +517,7 @@ If there is some internal error with the page, 500 error is displayed with a mes
 
 This Project is built using various technologies.
 
-- **Django 5.0.6:** A Python web framework for building web applications.
+- **Django 4.1.7:** A Python web framework for building web applications.
 - **Bootstrap 5.2.3:** A front-end framework for responsive and visually appealing design.
 - **ElephantSQL:** An open-source relational database for data storage.
 - **Cloudinary:** Cloud-based storage for the users uploaded images.
@@ -532,7 +549,7 @@ The README was written using markdown.
 - Then I went back to the deploy tab of my app, and clicked connect to GitHub.
 - I then searched for my repository and connected it to the app, and clicked Deploy branch
 
-Here is a link to my Deployed project: 
+Here is a link to my Deployed project : 
 
 Cloning or forking this project can be done from my GitHub repository, and 
 you need to install the dependencies using the *pip install -r requirements.txt* command.
@@ -540,10 +557,142 @@ you need to install the dependencies using the *pip install -r requirements.txt*
 
 ## Testing
 ### Validation
+
+Python was validated using [PEP8 CI python linter](https://pep8ci.herokuapp.com/), with no errors or warnings.
+
+![python](documentation/images/python-validation.png)
+
+
+CSS was validated using [jigsaw(]https://jigsaw.w3.org/css-validator/#validate_by_input), with no errors or warnings.
+
+![css](documentation/images/css-validation.png)
+
+
+HTML was validated using [W3C Validator](https://validator.w3.org/#validate_by_uri), with no errors or warnings.
+
+![html](documentation/images/html-validator.png)
+
+
 ### Lighthouse Report
-### Automated Testing
+
+The following are lighthouse reports from my different pages:
+
+
+- Home
+
+![home](documentation/images/landing-page-lighthouse.png)
+
+- Blog
+
+![blog](documentation/images/blog-page-lighthouse.png)
+
+
+- Detail View
+
+![detail view](documentation/images/blog-detail-lighthouse.png)
+
+- About
+
+![about](documentation/images/about-page-lighthouse.png)
+
+- Contact
+
+![contact](documentation/images/contact-page-lighthouse.png)
+
+- Register
+
+![register](documentation/images/signup-lighthouse.png)
+
+- Sign In
+
+![sign in](documentation/images/login-page-lighthouse.png)
+
+- Profile
+
+![profile](documentation/images/profile-lighthouse.png)
+
+- Edit Profile
+
+![edit profile](documentation/images/edit-profile-lighthouse.png)
+
+- Create Post
+
+![create post](documentation/images/create-post-lighthouse.png)
+
+- Edit Post
+
+![edit post](documentation/images/edit-comment-lighthouse.png)
+
+- Delete Post
+
+![delete post](documentation/images/delete-post-lighthouse.png)
+
+- Comment
+
+![comment](documentation/images/comment-lighthouse.png)
+
+- Edit Comment
+
+![edit comment](documentation/images/edit-comment-lighthouse.png)
+
+- Delete Comment
+
+![delete comment](documentation/images/delete-comment-lighthouse.png)
+
+
+### Manual Testning
+
+I chose to test all functions manually, as I am completely new to automatic testing and time was not on my side to really get into this.
+
+- Header/ navigation
+
+![header, navigation](documentation/images/header-test.png)
+
+- Blog page / Detail View
+
+![blog](documentation/images/blog-test.png)
+
+- Comment / Like
+
+![comment-like](documentation/images/commen-like-test.png)
+
+- About page
+
+![about](documentation/images/about-test.png)
+
+- Contact page
+
+![contact](documentation/images/contact-test.png)
+
+- Register Page
+
+![register](documentation/images/register-test.png)
+
+- Sign in page
+
+![sign in](documentation/images/sign-in-page.png)
+
+- Profile page
+
+![profile](documentation/images/profile-test.png)
+
+- Create Post page
+
+![create post](documentation/images/create-post-test.png)
+
+- Sign out Page
+
+![sign out](documentation/images/sign-out-test.png)
+
+- Admin
+
+![admin](documentation/images/admin-test.png)
+
+
 ### Responsiveness
 
+during the course of the project, I tested responsiveness on my Macbook Pro
+ipad 12.9 screen and iphone 15 and used google devtool for screens I didn't have at home and test on
 ### User Stories Testing
 
 Here I have tested all my four EPICs and their associated User stories that have been implemented. I have carefully reviewed each User story's acceptance criteria and made sure they are met. Every user story that is implemented and that has met the criteria is listed as done in the project's Kanban board
@@ -578,8 +727,32 @@ In my view, I had only linked comments to the blog post itself. I fixed the bug 
 
 ### Unresolved Bugs
 I currently have no bugs I am aware of.
+
 ## Credits
+
 ### Websites
-### Resources
+- The basic code structure of this project has been inspired from; 
+[Dee Mc](https://www.youtube.com/@IonaFrisbee)  
+[Codemy.com](https://www.youtube.com/@Codemycom)
+[Code Institute](https://codeinstitute.net/) "I think therefore i blog"
+
+
+- As always used stack overflow for Troubleshooting 
+[Stack overflow](https://stackoverflow.co/teams/)
+
+- The javascript in my profile View are taken from 
+[W3school](https://www.w3schools.com/)
+
+- Took help of chatgtp for inspiration for the content of the blog posts 
+[Chatgtp](https://openai.com/)
+
 ### Images
+
+- The header image, as well as all images (before the top one) in the about page are taken from [Unsplash](https://unsplash.com/)
+
+- The Logo did a designed here [Logo](https://logo.com/editor/colors)
+
 ### People
+
+I want to thank my mentor Graeme. Allways there with useful advice and support.
+this time I also had the support of our Code Institute tutors
