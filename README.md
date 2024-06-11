@@ -732,27 +732,37 @@ I currently have no bugs I am aware of.
 
 ### Websites
 - The basic code structure of this project has been inspired from; 
-[Dee Mc](https://www.youtube.com/@IonaFrisbee)  
-[Codemy.com](https://www.youtube.com/@Codemycom)
-[Code Institute](https://codeinstitute.net/) "I think therefore i blog"
+
+    [Dee Mc](https://www.youtube.com/@IonaFrisbee) 
+
+    [Codemy.com](https://www.youtube.com/@Codemycom)
+
+    [Code Institute](https://codeinstitute.net/) "I think therefore i blog"
 
 
 - As always used stack overflow for Troubleshooting 
-[Stack overflow](https://stackoverflow.co/teams/)
+
+    [Stack overflow](https://stackoverflow.co/teams/)
 
 - The javascript in my profile View are taken from 
-[W3school](https://www.w3schools.com/)
+
+    [W3school](https://www.w3schools.com/)
 
 - Took help of chatgtp for inspiration for the content of the blog posts 
-[Chatgtp](https://openai.com/)
+
+    [Chatgtp](https://openai.com/)
 
 ### Images
 
-- The header image, as well as all images (before the top one) in the about page are taken from [Unsplash](https://unsplash.com/)
+- The header image, as well as all images (before the top one) in the about page are taken from 
 
-- The Logo did a designed here [Logo](https://logo.com/editor/colors)
+[   Unsplash](https://unsplash.com/)
+
+- The Logo did a designed here 
+
+[   Logo](https://logo.com/editor/colors)
 
 ### People
 
 I want to thank my mentor Graeme. Allways there with useful advice and support.
-this time I also had the support of our Code Institute tutors
+This time I also had the support of our Code Institute tutors
