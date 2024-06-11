@@ -1,4 +1,7 @@
 # Charge Together
+
+![mockup](documentation/images/mockup.png)
+
 ## Introduction
 
 When you, as new parents, have just found out that your child has Charge Syndrome, your life is turned upside down and the first information you find online is scary and you feel very alone. 
@@ -6,6 +9,8 @@ When you, as new parents, have just found out that your child has Charge Syndrom
 Therefore, this blog was created and designed for the families and relatives of, children, young people and adults, with Charge Syndrome. 
 
 Here users can write and share their stories and experiences. And as new parents to be able to come to this blog and hopefully get some kind of peace. Because even if the road didn't turn out as they thought, it will still be good in the end and they are not alone!
+
+[Live Site](https://charge-together-92ed68783ff6.herokuapp.com)
 
 ## Table of Content
 
@@ -549,13 +554,16 @@ The README was written using markdown.
 - Then I went back to the deploy tab of my app, and clicked connect to GitHub.
 - I then searched for my repository and connected it to the app, and clicked Deploy branch
 
-Here is a link to my Deployed project : 
+Here is a link to my Deployed project: [Live site](https://charge-together-92ed68783ff6.herokuapp.com)
 
 Cloning or forking this project can be done from my GitHub repository, and 
 you need to install the dependencies using the *pip install -r requirements.txt* command.
 
 
 ## Testing
+
+All the various tests that the website has gone through are reported here.
+
 ### Validation
 
 Python was validated using [PEP8 CI python linter](https://pep8ci.herokuapp.com/), with no errors or warnings.
@@ -752,15 +760,19 @@ I currently have no bugs I am aware of.
 
     [Chatgtp](https://openai.com/)
 
+- used to create my favicon.
+
+    [Favicon](https://favicon.io/)
+
 ### Images
 
-- The header image, as well as all images (before the top one) in the about page are taken from 
+- The header image, as well as all images (before the top one) in the about page are taken from [Unsplash](https://unsplash.com/)
 
-[   Unsplash](https://unsplash.com/)
+- The Logo I did are designed here [Logo](https://logo.com/editor/colors)
 
-- The Logo did a designed here 
+- [Am I Responsive](https://ui.dev/amiresponsive) was used for the mouckup
 
-[   Logo](https://logo.com/editor/colors)
+
 
 ### People
 
