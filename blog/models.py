@@ -57,7 +57,7 @@ class PostLike(models.Model):
 
 class Comment(models.Model):
     """
-    
+    Model for leaving comments
     """
     post = models.ForeignKey(Post, related_name="comments", on_delete=models.CASCADE)
     user = models.ForeignKey(User, related_name="commenter", on_delete=models.CASCADE)
