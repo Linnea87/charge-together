@@ -74,7 +74,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 
 DJRICHTEXTFIELD_CONFIG = {
-    "js": ["//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"],
+    "js": ["//cdn.ckeditor.com/4.25.1-lts/standard/ckeditor.js"],,
     "init_template": "djrichtextfield/init/ckeditor.js",
     "settings": {
         "toolbar": [
