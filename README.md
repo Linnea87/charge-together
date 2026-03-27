@@ -10,7 +10,7 @@ Therefore, this blog was created and designed for the families and relatives of,
 
 Here users can write and share their stories and experiences. And as new parents to be able to come to this blog and hopefully get some kind of peace. Because even if the road didn't turn out as they thought, it will still be good in the end and they are not alone!
 
-[Live Site](https://charge-together-92ed68783ff6.herokuapp.com)
+[Live Site](https://charge-together.onrender.com)
 
 ## Table of Content
 
@@ -518,43 +518,42 @@ If there is some internal error with the page, 500 error is displayed with a mes
 - By requiring users to be logged in to access these features, the application enhances security and ensures that sensitive operations are performed by authorized individuals only.
 
 
-## Languages/Technolgies
+## Languages/Technologies
 
 This Project is built using various technologies.
 
-- **Django 4.1.7:** A Python web framework for building web applications.
+- **Django 4.2.10:** A Python web framework for building web applications.
 - **Bootstrap 5.2.3:** A front-end framework for responsive and visually appealing design.
-- **ElephantSQL:** An open-source relational database for data storage.
+- **Supabase:** A cloud-based PostgreSQL database for data storage.
 - **Cloudinary:** Cloud-based storage for the users uploaded images.
-- **Heroku:** The platform where the project is deployed.
+- **Render:** The platform where the project is deployed.
 - **Git and GitHub:** Version control and code repository management.
-- **IDE:** Vs Code (Visual Studio Code).
+- **IDE:** VS Code (Visual Studio Code).
 
-Added libraries can be seen in the requirements.txt file. 
-Additionally, custom- python, html, django templating language, and css were all used. 
+Added libraries can be seen in the requirements.txt file.
+Additionally, custom Python, HTML, Django templating language, and CSS were all used.
 The README was written using markdown.
 
 ## Deployment
 
-- I set up a postgreSQL server at [ElephantSQL.](https://www.elephantsql.com) 
+- I set up a PostgreSQL database at [Supabase](https://supabase.com).
 - I made sure to adjust the settings file accordingly, to utilize that database.
-- I also made sure to have my SECRET_KEY and DATABASE_URL in the env.py file.
-- And made sute to add the env.py file to .gitignore.
-- I installed gunicorn version 20.1.0, and added it to the requirements.txt.
-- I installed whitenoise version 5.3.0 and added it to the requirements.txt. I also added it to middleware settings file.
-- I also created  a path for whitenoise to collect static files in the settings file.
-- I Created a Procfile, and declared it as a web process followed by the command to execute the project.
-- Added a runtime.txt file to root directory, and added a supported python version as close as possible to my own.
-- I run the command collectstatic, to collect static files.
-- In the settings file I set **DEBUG = os.environ.get("DEVELOPMENT")** and in env.py I added; **os.environ.setdefault('DEVELOPMENT', 'True')**, so i don´t have to remember to change debug to *False* everytime I deploy to Heroku.
-- I added Heroku to allowed hosts in the settings file (.herokuapp). Then I Pushed the code to GitHub.
-- I went to [Heroku](https://.heroku.com) and created a new app.
-- On the settings tab of my app I clicked "Reveal Config Vars" and added DATABASE_URL and SECRET_KEY.
-- The DATABASE_URL got the value of my postgresql database url, and the SECRET_KEY got a complicated value that i made up of my own.
-- Then I went back to the deploy tab of my app, and clicked connect to GitHub.
-- I then searched for my repository and connected it to the app, and clicked Deploy branch
+- I made sure to have my SECRET_KEY, DATABASE_URL and CLOUDINARY_URL in the env.py file.
+- I made sure to add the env.py file to .gitignore.
+- I installed gunicorn version 22.0.0, and added it to the requirements.txt.
+- I installed whitenoise version 5.3.0 and added it to the requirements.txt. I also added it to the middleware in the settings file.
+- I added a runtime.txt file to the root directory with the supported Python version.
+- In the settings file I set **DEBUG = os.environ.get("DEVELOPMENT")** and in env.py I added **os.environ["DEVELOPMENT"] = "True"**, so debug is automatically set to False in production.
+- I added .onrender.com to allowed hosts in the settings file.
+- I pushed the code to GitHub.
+- I went to [Render](https://render.com) and created a new Web Service.
+- I connected my GitHub repository to the Render app.
+- In the environment variables section I added SECRET_KEY, DATABASE_URL and CLOUDINARY_URL.
+- I set the build command to `pip install -r requirements.txt && python manage.py migrate`.
+- I set the start command to `gunicorn chargetogether.wsgi:application`.
+- Render automatically deploys on every push to the main branch.
 
-Here is a link to my Deployed project: [Live site](https://charge-together-92ed68783ff6.herokuapp.com)
+Here is a link to my deployed project: [Live site](https://charge-together.onrender.com)
 
 Cloning or forking this project can be done from my GitHub repository, and 
 you need to install the dependencies using the *pip install -r requirements.txt* command.
