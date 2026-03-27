@@ -32,10 +32,8 @@ DEBUG = os.environ.get("DEVELOPMENT")
 
 ALLOWED_HOSTS = [
     "localhost",
-    ".herokuapp.com",
-    "8000-linnea87-chargetogether-ptbdtbue0qj.ws-us114.gitpod.io",
-    "8000-linnea87-chargetogether-ptbdtbue0qj.ws-eu114.gitpod.io",
     "127.0.0.1",
+    ".onrender.com",
 ]
 
 
@@ -153,7 +151,7 @@ WSGI_APPLICATION = "chargetogether.wsgi.application"
 DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
 
 
-CSRF_TRUSTED_ORIGINS = ["https://*.gitpod.io", "https://*.herokuapp.com"]
+CSRF_TRUSTED_ORIGINS = ["https://*.onrender.com"]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
